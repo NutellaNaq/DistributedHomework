@@ -1,0 +1,21 @@
+# Binare compilate
+Tema1/studiu
+Tema1/cercetare/studiu
+Tema1/gray
+Tema1/blur
+Tema1/rotate
+*.o
+*.out
+
+# Imagini (cele de test se genereaza cu Tema1/cercetare/genereaza_imagini.py)
+*.ppm
+*.pgm
+
+# Iesirile intermediare ale studiului (rezultate.txt si grafice/ se pastreaza)
+Tema1/cercetare/iesiri/
+Tema1/cercetare/hosts
+
+# Python / sistem
+__pycache__/
+.venv/
+.DS_Store
