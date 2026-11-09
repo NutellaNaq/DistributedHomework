@@ -1,0 +1,2167 @@
+### Start 11/09/2026 13:24:56 pe ubuntu1
+### Imagine=imagini/input_4000x4000.ppm; p=8
+### Start 11/09/2026 13:26:23 pe ubuntu1
+### Imagine=imagini/input_6000x6000.ppm; p=4
+[Rank 0 on ubuntu1] Loaded imagini/input_6000x6000.ppm (6000x6000), 4 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.077694523 s; calcul=0.042920309 s
+  Rulare 2: 0.062870201 s; calcul=0.045771565 s
+  Rulare 3: 0.058108247 s; calcul=0.042223515 s
+  Rulare 4: 0.059642954 s; calcul=0.04143643 s
+  Rulare 5: 0.055832874 s; calcul=0.044092353 s
+  MEDIA=0.0628297598 s; deviatie standard=0.0086943609 s; calcul mediu=0.0432888344 s; blocuri=1; verificare: OK
+CSV,gray,6000,6000,4,2,seq,-,-,1,0,5,0.0628297598,0.0086943609,0.0432888344
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.252140299 s; calcul=0.014178948 s
+  Rulare 2: 0.238147015 s; calcul=0.014476112 s
+  Rulare 3: 0.236442303 s; calcul=0.013479366 s
+  Rulare 4: 0.2423639 s; calcul=0.014177737 s
+  Rulare 5: 0.238970225 s; calcul=0.01418278 s
+  MEDIA=0.241612748 s; deviatie standard=0.00626740165 s; calcul mediu=0.0140989886 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,4,2,mpi,1d,static,64,0,5,0.241612748,0.00626740165,0.0140989886
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.137433155 s; calcul=0.021854758 s
+  Rulare 2: 0.135686943 s; calcul=0.021721633 s
+  Rulare 3: 0.147682178 s; calcul=0.020435672 s
+  Rulare 4: 0.135210649 s; calcul=0.021667174 s
+  Rulare 5: 0.128401134 s; calcul=0.022459757 s
+  MEDIA=0.136882812 s; deviatie standard=0.00694791834 s; calcul mediu=0.0216277988 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,4,2,mpi,1d,dynamic,64,0,5,0.136882812,0.00694791834,0.0216277988
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.244632281 s; calcul=0.013885491 s
+  Rulare 2: 0.249900251 s; calcul=0.013839533 s
+  Rulare 3: 0.246045534 s; calcul=0.014706823 s
+  Rulare 4: 0.245369116 s; calcul=0.014247572 s
+  Rulare 5: 0.246873911 s; calcul=0.014488737 s
+  MEDIA=0.246564219 s; deviatie standard=0.00204050903 s; calcul mediu=0.0142336312 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,4,2,mpi,2d,static,64,0,5,0.246564219,0.00204050903,0.0142336312
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.171901152 s; calcul=0.018076372 s
+  Rulare 2: 0.155329655 s; calcul=0.018710715 s
+  Rulare 3: 0.160866627 s; calcul=0.019039878 s
+  Rulare 4: 0.161453169 s; calcul=0.018937209 s
+  Rulare 5: 0.168493811 s; calcul=0.018473624 s
+  MEDIA=0.163608883 s; deviatie standard=0.00658287426 s; calcul mediu=0.0186475596 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,4,2,mpi,2d,dynamic,64,0,5,0.163608883,0.00658287426,0.0186475596
+
+Operatie: blur; secvential
+  Rulare 1: 6.41811199 s; calcul=6.37144503 s
+  Rulare 2: 6.39294506 s; calcul=6.35957533 s
+  Rulare 3: 6.5109834 s; calcul=6.47612169 s
+  Rulare 4: 6.42567003 s; calcul=6.38847478 s
+  Rulare 5: 6.42439782 s; calcul=6.40129689 s
+  MEDIA=6.43442166 s; deviatie standard=0.0447914101 s; calcul mediu=6.39938274 s; blocuri=1; verificare: OK
+CSV,blur,6000,6000,4,2,seq,-,-,1,4,5,6.43442166,0.0447914101,6.39938274
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 2.49300596 s; calcul=2.18640192 s
+  Rulare 2: 2.49374013 s; calcul=2.18319007 s
+  Rulare 3: 2.49316182 s; calcul=2.18679416 s
+  Rulare 4: 2.49294908 s; calcul=2.1869455 s
+  Rulare 5: 2.50805532 s; calcul=2.19447126 s
+  MEDIA=2.49618246 s; deviatie standard=0.00664452929 s; calcul mediu=2.18756058 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,4,2,mpi,1d,static,64,4,5,2.49618246,0.00664452929,2.18756058
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 2.29213244 s; calcul=2.2207401 s
+  Rulare 2: 2.29237669 s; calcul=2.2182471 s
+  Rulare 3: 2.29245202 s; calcul=2.22192311 s
+  Rulare 4: 2.28976968 s; calcul=2.22374778 s
+  Rulare 5: 2.30091179 s; calcul=2.2220074 s
+  MEDIA=2.29352853 s; deviatie standard=0.00427423023 s; calcul mediu=2.2213331 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,4,2,mpi,1d,dynamic,64,4,5,2.29352853,0.00427423023,2.2213331
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 2.49641542 s; calcul=2.1987641 s
+  Rulare 2: 2.50150456 s; calcul=2.20134095 s
+  Rulare 3: 2.49872814 s; calcul=2.20246936 s
+  Rulare 4: 2.50619282 s; calcul=2.21055891 s
+  Rulare 5: 2.49469617 s; calcul=2.19836406 s
+  MEDIA=2.49950742 s; deviatie standard=0.00452766542 s; calcul mediu=2.20229947 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,4,2,mpi,2d,static,64,4,5,2.49950742,0.00452766542,2.20229947
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 2.29953246 s; calcul=2.22265085 s
+  Rulare 2: 2.29923754 s; calcul=2.22410965 s
+  Rulare 3: 2.30084325 s; calcul=2.22416333 s
+  Rulare 4: 2.29368339 s; calcul=2.2209756 s
+  Rulare 5: 2.3037623 s; calcul=2.22179053 s
+  MEDIA=2.29941179 s; deviatie standard=0.00366863315 s; calcul mediu=2.22273799 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,4,2,mpi,2d,dynamic,64,4,5,2.29941179,0.00366863315,2.22273799
+
+Operatie: rotate; secvential
+  Rulare 1: 0.260542399 s; calcul=0.22864908 s
+  Rulare 2: 0.251246651 s; calcul=0.234307885 s
+  Rulare 3: 0.321944502 s; calcul=0.303983174 s
+  Rulare 4: 0.392103066 s; calcul=0.375554926 s
+  Rulare 5: 0.383137565 s; calcul=0.366997781 s
+  MEDIA=0.321794837 s; deviatie standard=0.0660210335 s; calcul mediu=0.301898569 s; blocuri=1; verificare: OK
+CSV,rotate,6000,6000,4,2,seq,-,-,1,0,5,0.321794837,0.0660210335,0.301898569
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.36104185 s; calcul=0.025049268 s
+  Rulare 2: 0.366993615 s; calcul=0.024893229 s
+  Rulare 3: 0.363857315 s; calcul=0.024879272 s
+  Rulare 4: 0.363551731 s; calcul=0.024732565 s
+  Rulare 5: 0.363026063 s; calcul=0.024634903 s
+  MEDIA=0.363694115 s; deviatie standard=0.00214560078 s; calcul mediu=0.0248378474 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,4,2,mpi,1d,static,64,0,5,0.363694115,0.00214560078,0.0248378474
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.293350274 s; calcul=0.025104266 s
+  Rulare 2: 0.291994146 s; calcul=0.02585123 s
+  Rulare 3: 0.294403902 s; calcul=0.023648931 s
+  Rulare 4: 0.287579011 s; calcul=0.026977606 s
+  Rulare 5: 0.297516409 s; calcul=0.024824352 s
+  MEDIA=0.292968748 s; deviatie standard=0.00363612306 s; calcul mediu=0.025281277 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,4,2,mpi,1d,dynamic,64,0,5,0.292968748,0.00363612306,0.025281277
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.357936926 s; calcul=0.024271584 s
+  Rulare 2: 0.348628946 s; calcul=0.02473254 s
+  Rulare 3: 0.358359052 s; calcul=0.024516751 s
+  Rulare 4: 0.358695345 s; calcul=0.024702251 s
+  Rulare 5: 0.366415655 s; calcul=0.025715784 s
+  MEDIA=0.358007185 s; deviatie standard=0.00630983449 s; calcul mediu=0.024787782 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,4,2,mpi,2d,static,64,0,5,0.358007185,0.00630983449,0.024787782
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.291055644 s; calcul=0.025709185 s
+  Rulare 2: 0.28226754 s; calcul=0.027054855 s
+  Rulare 3: 0.311731692 s; calcul=0.024803558 s
+  Rulare 4: 0.296898157 s; calcul=0.023841475 s
+  Rulare 5: 0.300114457 s; calcul=0.024629684 s
+  MEDIA=0.296413498 s; deviatie standard=0.0109246715 s; calcul mediu=0.0252077514 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,4,2,mpi,2d,dynamic,64,0,5,0.296413498,0.0109246715,0.0252077514
+### Imagine=imagini/input_4000x4000.ppm; p=8
+[Rank 0 on ubuntu1] Loaded imagini/input_4000x4000.ppm (4000x4000), 8 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+  4: ubuntu1
+  5: ubuntu2
+  6: ubuntu1
+  7: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.019073128 s; calcul=0.015286119 s
+  Rulare 2: 0.019045462 s; calcul=0.015235286 s
+  Rulare 3: 0.019324286 s; calcul=0.015331994 s
+  Rulare 4: 0.018906871 s; calcul=0.015087036 s
+  Rulare 5: 0.019025037 s; calcul=0.015139869 s
+  MEDIA=0.0190749568 s; deviatie standard=0.000153120182 s; calcul mediu=0.0152160608 s; blocuri=1; verificare: OK
+CSV,gray,4000,4000,8,2,seq,-,-,1,0,5,0.0190749568,0.000153120182,0.0152160608
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.133351856 s; calcul=0.003304062 s
+  Rulare 2: 0.137888658 s; calcul=0.003574226 s
+  Rulare 3: 0.14178 s; calcul=0.003238144 s
+  Rulare 4: 0.137510199 s; calcul=0.003271354 s
+  Rulare 5: 0.13909312 s; calcul=0.002996937 s
+  MEDIA=0.137924767 s; deviatie standard=0.00305420021 s; calcul mediu=0.0032769446 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,8,2,mpi,1d,static,64,0,5,0.137924767,0.00305420021,0.0032769446
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.120948452 s; calcul=0.002577297 s
+  Rulare 2: 0.126084963 s; calcul=0.00272559 s
+  Rulare 3: 0.125806463 s; calcul=0.002919339 s
+  Rulare 4: 0.128905345 s; calcul=0.00274163 s
+  Rulare 5: 0.121397661 s; calcul=0.002573421 s
+  MEDIA=0.124628577 s; deviatie standard=0.00338309615 s; calcul mediu=0.0027074554 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,8,2,mpi,1d,dynamic,64,0,5,0.124628577,0.00338309615,0.0027074554
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.140088246 s; calcul=0.003386227 s
+  Rulare 2: 0.140701623 s; calcul=0.003377019 s
+  Rulare 3: 0.140467914 s; calcul=0.003399267 s
+  Rulare 4: 0.137901658 s; calcul=0.003485893 s
+  Rulare 5: 0.137763032 s; calcul=0.003435894 s
+  MEDIA=0.139384495 s; deviatie standard=0.00143455883 s; calcul mediu=0.00341686 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,8,2,mpi,2d,static,64,0,5,0.139384495,0.00143455883,0.00341686
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.141445916 s; calcul=0.003837601 s
+  Rulare 2: 0.129576139 s; calcul=0.002494399 s
+  Rulare 3: 0.136156612 s; calcul=0.002748773 s
+  Rulare 4: 0.124069167 s; calcul=0.002738732 s
+  Rulare 5: 0.124122792 s; calcul=0.002405256 s
+  MEDIA=0.131074125 s; deviatie standard=0.00763282634 s; calcul mediu=0.0028449522 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,8,2,mpi,2d,dynamic,64,0,5,0.131074125,0.00763282634,0.0028449522
+
+Operatie: blur; secvential
+  Rulare 1: 2.87121006 s; calcul=2.8611793 s
+  Rulare 2: 2.87046734 s; calcul=2.86317538 s
+  Rulare 3: 2.87143915 s; calcul=2.86206847 s
+  Rulare 4: 2.86385157 s; calcul=2.85660759 s
+  Rulare 5: 2.87135177 s; calcul=2.8619653 s
+  MEDIA=2.86966398 s; deviatie standard=0.00327183851 s; calcul mediu=2.86099921 s; blocuri=1; verificare: OK
+CSV,blur,4000,4000,8,2,seq,-,-,1,4,5,2.86966398,0.00327183851,2.86099921
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.599477594 s; calcul=0.447791545 s
+  Rulare 2: 0.592828175 s; calcul=0.448062876 s
+  Rulare 3: 0.574098377 s; calcul=0.447792713 s
+  Rulare 4: 0.586708506 s; calcul=0.447811544 s
+  Rulare 5: 0.586341049 s; calcul=0.448535751 s
+  MEDIA=0.58789074 s; deviatie standard=0.00938964784 s; calcul mediu=0.447998886 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,8,2,mpi,1d,static,64,4,5,0.58789074,0.00938964784,0.447998886
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.462405127 s; calcul=0.451617875 s
+  Rulare 2: 0.458536668 s; calcul=0.450313083 s
+  Rulare 3: 0.460529461 s; calcul=0.451171456 s
+  Rulare 4: 0.459971543 s; calcul=0.449160497 s
+  Rulare 5: 0.462422419 s; calcul=0.451717249 s
+  MEDIA=0.460773044 s; deviatie standard=0.00166487589 s; calcul mediu=0.450796032 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,8,2,mpi,1d,dynamic,64,4,5,0.460773044,0.00166487589,0.450796032
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.567979625 s; calcul=0.449548743 s
+  Rulare 2: 0.556449579 s; calcul=0.449512243 s
+  Rulare 3: 0.566607124 s; calcul=0.449140912 s
+  Rulare 4: 0.559921497 s; calcul=0.448490291 s
+  Rulare 5: 0.550299785 s; calcul=0.448311708 s
+  MEDIA=0.560251522 s; deviatie standard=0.00730954871 s; calcul mediu=0.449000779 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,8,2,mpi,2d,static,64,4,5,0.560251522,0.00730954871,0.449000779
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.460559294 s; calcul=0.45057225 s
+  Rulare 2: 0.457990751 s; calcul=0.451481252 s
+  Rulare 3: 0.460716836 s; calcul=0.450455747 s
+  Rulare 4: 0.482481469 s; calcul=0.470741714 s
+  Rulare 5: 0.490117847 s; calcul=0.466227464 s
+  MEDIA=0.470373239 s; deviatie standard=0.0148268711 s; calcul mediu=0.457895685 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,8,2,mpi,2d,dynamic,64,4,5,0.470373239,0.0148268711,0.457895685
+
+Operatie: rotate; secvential
+  Rulare 1: 0.049826579 s; calcul=0.042893016 s
+  Rulare 2: 0.04952933 s; calcul=0.042746349 s
+  Rulare 3: 0.051044528 s; calcul=0.043331474 s
+  Rulare 4: 0.049505206 s; calcul=0.042522099 s
+  Rulare 5: 0.049299499 s; calcul=0.042657932 s
+  MEDIA=0.0498410284 s; deviatie standard=0.000698535386 s; calcul mediu=0.042830174 s; blocuri=1; verificare: OK
+CSV,rotate,4000,4000,8,2,seq,-,-,1,0,5,0.0498410284,0.000698535386,0.042830174
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.206405825 s; calcul=0.005684213 s
+  Rulare 2: 0.203207657 s; calcul=0.005762127 s
+  Rulare 3: 0.202665491 s; calcul=0.006335583 s
+  Rulare 4: 0.214710121 s; calcul=0.011501507 s
+  Rulare 5: 0.199635907 s; calcul=0.006065333 s
+  MEDIA=0.205325 s; deviatie standard=0.00576997807 s; calcul mediu=0.0070697526 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,8,2,mpi,1d,static,64,0,5,0.205325,0.00576997807,0.0070697526
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.198055114 s; calcul=0.00552888 s
+  Rulare 2: 0.181100025 s; calcul=0.005264424 s
+  Rulare 3: 0.185426193 s; calcul=0.005286798 s
+  Rulare 4: 0.196569905 s; calcul=0.005368672 s
+  Rulare 5: 0.186606902 s; calcul=0.005419755 s
+  MEDIA=0.189551628 s; deviatie standard=0.00739401286 s; calcul mediu=0.0053737058 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,8,2,mpi,1d,dynamic,64,0,5,0.189551628,0.00739401286,0.0053737058
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.213108369 s; calcul=0.005395212 s
+  Rulare 2: 0.204641034 s; calcul=0.006402497 s
+  Rulare 3: 0.204553033 s; calcul=0.005906962 s
+  Rulare 4: 0.214257453 s; calcul=0.006718163 s
+  Rulare 5: 0.209266285 s; calcul=0.006108167 s
+  MEDIA=0.209165235 s; deviatie standard=0.00456152395 s; calcul mediu=0.0061062002 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,8,2,mpi,2d,static,64,0,5,0.209165235,0.00456152395,0.0061062002
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.199676323 s; calcul=0.005620584 s
+  Rulare 2: 0.182069317 s; calcul=0.005564334 s
+  Rulare 3: 0.202302949 s; calcul=0.005684797 s
+  Rulare 4: 0.188578403 s; calcul=0.00614154 s
+  Rulare 5: 0.186686944 s; calcul=0.005895917 s
+  MEDIA=0.191862787 s; deviatie standard=0.00871115536 s; calcul mediu=0.0057814344 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,8,2,mpi,2d,dynamic,64,0,5,0.191862787,0.00871115536,0.0057814344
+### Imagine=imagini/input_4000x4000.ppm; p=4
+[Rank 0 on ubuntu1] Loaded imagini/input_4000x4000.ppm (4000x4000), 4 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.018961747 s; calcul=0.015097797 s
+  Rulare 2: 0.019370202 s; calcul=0.015127839 s
+  Rulare 3: 0.019250036 s; calcul=0.015267423 s
+  Rulare 4: 0.018848539 s; calcul=0.015033589 s
+  Rulare 5: 0.018831831 s; calcul=0.014994005 s
+  MEDIA=0.019052471 s; deviatie standard=0.000244175158 s; calcul mediu=0.0151041306 s; blocuri=1; verificare: OK
+CSV,gray,4000,4000,4,2,seq,-,-,1,0,5,0.019052471,0.000244175158,0.0151041306
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.107541729 s; calcul=0.006049876 s
+  Rulare 2: 0.10773379 s; calcul=0.006382208 s
+  Rulare 3: 0.109041207 s; calcul=0.006039289 s
+  Rulare 4: 0.108948832 s; calcul=0.006336788 s
+  Rulare 5: 0.111159041 s; calcul=0.006455418 s
+  MEDIA=0.10888492 s; deviatie standard=0.00144303491 s; calcul mediu=0.0062527158 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,4,2,mpi,1d,static,64,0,5,0.10888492,0.00144303491,0.0062527158
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.064208566 s; calcul=0.00917921 s
+  Rulare 2: 0.066722941 s; calcul=0.009133757 s
+  Rulare 3: 0.065221565 s; calcul=0.00913625 s
+  Rulare 4: 0.062707648 s; calcul=0.009276503 s
+  Rulare 5: 0.068142858 s; calcul=0.008723837 s
+  MEDIA=0.0654007156 s; deviatie standard=0.0021197614 s; calcul mediu=0.0090899114 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,4,2,mpi,1d,dynamic,64,0,5,0.0654007156,0.0021197614,0.0090899114
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.10938654 s; calcul=0.006490417 s
+  Rulare 2: 0.109640715 s; calcul=0.006488411 s
+  Rulare 3: 0.111495875 s; calcul=0.006188333 s
+  Rulare 4: 0.10981654 s; calcul=0.006446122 s
+  Rulare 5: 0.112151791 s; calcul=0.006386795 s
+  MEDIA=0.110498292 s; deviatie standard=0.00124151595 s; calcul mediu=0.0064000156 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,4,2,mpi,2d,static,64,0,5,0.110498292,0.00124151595,0.0064000156
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.06696315 s; calcul=0.008874043 s
+  Rulare 2: 0.072568818 s; calcul=0.008555134 s
+  Rulare 3: 0.0699924 s; calcul=0.008646842 s
+  Rulare 4: 0.079910154 s; calcul=0.007786957 s
+  Rulare 5: 0.079457946 s; calcul=0.008398795 s
+  MEDIA=0.0737784936 s; deviatie standard=0.00574674184 s; calcul mediu=0.0084523542 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,4,2,mpi,2d,dynamic,64,0,5,0.0737784936,0.00574674184,0.0084523542
+
+Operatie: blur; secvential
+  Rulare 1: 2.84515728 s; calcul=2.83515391 s
+  Rulare 2: 2.85125774 s; calcul=2.84247762 s
+  Rulare 3: 2.84936429 s; calcul=2.84089746 s
+  Rulare 4: 2.84173801 s; calcul=2.83491641 s
+  Rulare 5: 2.84231251 s; calcul=2.83354116 s
+  MEDIA=2.84596597 s; deviatie standard=0.00422577811 s; calcul mediu=2.83739732 s; blocuri=1; verificare: OK
+CSV,blur,4000,4000,4,2,seq,-,-,1,4,5,2.84596597,0.00422577811,2.83739732
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 1.1118467 s; calcul=0.973874602 s
+  Rulare 2: 1.10604001 s; calcul=0.972319123 s
+  Rulare 3: 1.10617089 s; calcul=0.973227037 s
+  Rulare 4: 1.10407774 s; calcul=0.973074123 s
+  Rulare 5: 1.10745691 s; calcul=0.97264662 s
+  MEDIA=1.10711845 s; deviatie standard=0.00290593052 s; calcul mediu=0.973028301 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,4,2,mpi,1d,static,64,4,5,1.10711845,0.00290593052,0.973028301
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 1.02372183 s; calcul=0.986560154 s
+  Rulare 2: 1.023154 s; calcul=0.988911692 s
+  Rulare 3: 1.02514708 s; calcul=0.988510156 s
+  Rulare 4: 1.02309903 s; calcul=0.985597279 s
+  Rulare 5: 1.02224366 s; calcul=0.987412035 s
+  MEDIA=1.02347312 s; deviatie standard=0.0010744033 s; calcul mediu=0.987398263 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,4,2,mpi,1d,dynamic,64,4,5,1.02347312,0.0010744033,0.987398263
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 1.1130898 s; calcul=0.976960736 s
+  Rulare 2: 1.11042275 s; calcul=0.9753542 s
+  Rulare 3: 1.10722009 s; calcul=0.976892368 s
+  Rulare 4: 1.10388613 s; calcul=0.97491549 s
+  Rulare 5: 1.1072383 s; calcul=0.976283864 s
+  MEDIA=1.10837141 s; deviatie standard=0.00350707959 s; calcul mediu=0.976081332 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,4,2,mpi,2d,static,64,4,5,1.10837141,0.00350707959,0.976081332
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 1.02687277 s; calcul=0.990324923 s
+  Rulare 2: 1.02880131 s; calcul=0.984900543 s
+  Rulare 3: 1.03946792 s; calcul=0.99173942 s
+  Rulare 4: 1.02437089 s; calcul=0.989395754 s
+  Rulare 5: 1.02430197 s; calcul=0.988493252 s
+  MEDIA=1.02876297 s; deviatie standard=0.00627218334 s; calcul mediu=0.988970778 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,4,2,mpi,2d,dynamic,64,4,5,1.02876297,0.00627218334,0.988970778
+
+Operatie: rotate; secvential
+  Rulare 1: 0.049592163 s; calcul=0.0422581 s
+  Rulare 2: 0.048092707 s; calcul=0.041539474 s
+  Rulare 3: 0.04735175 s; calcul=0.040874224 s
+  Rulare 4: 0.047856749 s; calcul=0.041131516 s
+  Rulare 5: 0.048085248 s; calcul=0.041652807 s
+  MEDIA=0.0481957234 s; deviatie standard=0.000836668317 s; calcul mediu=0.0414912242 s; blocuri=1; verificare: OK
+CSV,rotate,4000,4000,4,2,seq,-,-,1,0,5,0.0481957234,0.000836668317,0.0414912242
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.163393604 s; calcul=0.011367815 s
+  Rulare 2: 0.161742604 s; calcul=0.011277603 s
+  Rulare 3: 0.162607312 s; calcul=0.011416728 s
+  Rulare 4: 0.158281852 s; calcul=0.011124108 s
+  Rulare 5: 0.196551367 s; calcul=0.012638187 s
+  MEDIA=0.168515348 s; deviatie standard=0.0157935906 s; calcul mediu=0.0115648882 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,4,2,mpi,1d,static,64,0,5,0.168515348,0.0157935906,0.0115648882
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.131133133 s; calcul=0.011710716 s
+  Rulare 2: 0.123335714 s; calcul=0.012669922 s
+  Rulare 3: 0.180236974 s; calcul=0.010857629 s
+  Rulare 4: 0.146355222 s; calcul=0.010681649 s
+  Rulare 5: 0.144678805 s; calcul=0.010460818 s
+  MEDIA=0.14514797 s; deviatie standard=0.0218237597 s; calcul mediu=0.0112761468 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,4,2,mpi,1d,dynamic,64,0,5,0.14514797,0.0218237597,0.0112761468
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.168633856 s; calcul=0.011664227 s
+  Rulare 2: 0.164431937 s; calcul=0.011130061 s
+  Rulare 3: 0.160044603 s; calcul=0.011706397 s
+  Rulare 4: 0.165055459 s; calcul=0.011028729 s
+  Rulare 5: 0.163820729 s; calcul=0.011359981 s
+  MEDIA=0.164397317 s; deviatie standard=0.00306843547 s; calcul mediu=0.011377879 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,4,2,mpi,2d,static,64,0,5,0.164397317,0.00306843547,0.011377879
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.140248345 s; calcul=0.010660106 s
+  Rulare 2: 0.140689753 s; calcul=0.010587898 s
+  Rulare 3: 0.146399973 s; calcul=0.0099589 s
+  Rulare 4: 0.134069176 s; calcul=0.011751001 s
+  Rulare 5: 0.140412929 s; calcul=0.010274837 s
+  MEDIA=0.140364035 s; deviatie standard=0.00436404813 s; calcul mediu=0.0106465484 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,4,2,mpi,2d,dynamic,64,0,5,0.140364035,0.00436404813,0.0106465484
+### Imagine=imagini/input_2000x2000.ppm; p=8
+[Rank 0 on ubuntu1] Loaded imagini/input_2000x2000.ppm (2000x2000), 8 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+  4: ubuntu1
+  5: ubuntu2
+  6: ubuntu1
+  7: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.004558627 s; calcul=0.003828418 s
+  Rulare 2: 0.004368201 s; calcul=0.00378596 s
+  Rulare 3: 0.004310335 s; calcul=0.003768084 s
+  Rulare 4: 0.004306127 s; calcul=0.003786335 s
+  Rulare 5: 0.00431516 s; calcul=0.003779293 s
+  MEDIA=0.00437169 s; deviatie standard=0.000107489766 s; calcul mediu=0.003789618 s; blocuri=1; verificare: OK
+CSV,gray,2000,2000,8,2,seq,-,-,1,0,5,0.00437169,0.000107489766,0.003789618
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.032586388 s; calcul=0.001352497 s
+  Rulare 2: 0.035238971 s; calcul=0.001162124 s
+  Rulare 3: 0.035120888 s; calcul=0.001139542 s
+  Rulare 4: 0.035535388 s; calcul=0.002227994 s
+  Rulare 5: 0.034248263 s; calcul=0.001241204 s
+  MEDIA=0.0345459796 s; deviatie standard=0.00119565047 s; calcul mediu=0.0014246722 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,8,2,mpi,1d,static,64,0,5,0.0345459796,0.00119565047,0.0014246722
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.03104097 s; calcul=0.001788163 s
+  Rulare 2: 0.03000547 s; calcul=0.00139108 s
+  Rulare 3: 0.030732387 s; calcul=0.001416373 s
+  Rulare 4: 0.030118011 s; calcul=0.001284331 s
+  Rulare 5: 0.031208512 s; calcul=0.001631746 s
+  MEDIA=0.03062107 s; deviatie standard=0.000539867416 s; calcul mediu=0.0015023386 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,8,2,mpi,1d,dynamic,64,0,5,0.03062107,0.000539867416,0.0015023386
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.035647222 s; calcul=0.001470625 s
+  Rulare 2: 0.044038642 s; calcul=0.001344706 s
+  Rulare 3: 0.036832181 s; calcul=0.001354748 s
+  Rulare 4: 0.035906222 s; calcul=0.001421665 s
+  Rulare 5: 0.037059514 s; calcul=0.002043914 s
+  MEDIA=0.0378967562 s; deviatie standard=0.00348495648 s; calcul mediu=0.0015271316 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,8,2,mpi,2d,static,64,0,5,0.0378967562,0.00348495648,0.0015271316
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.032537013 s; calcul=0.001757247 s
+  Rulare 2: 0.030860345 s; calcul=0.001265456 s
+  Rulare 3: 0.030055137 s; calcul=0.000958625 s
+  Rulare 4: 0.030714511 s; calcul=0.001106748 s
+  Rulare 5: 0.031871137 s; calcul=0.002031289 s
+  MEDIA=0.0312076286 s; deviatie standard=0.000987359361 s; calcul mediu=0.001423873 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,8,2,mpi,2d,dynamic,64,0,5,0.0312076286,0.000987359361,0.001423873
+
+Operatie: blur; secvential
+  Rulare 1: 0.718767276 s; calcul=0.716707232 s
+  Rulare 2: 0.717733028 s; calcul=0.71585219 s
+  Rulare 3: 0.719481024 s; calcul=0.717464649 s
+  Rulare 4: 0.724832235 s; calcul=0.723183151 s
+  Rulare 5: 0.736214203 s; calcul=0.734639031 s
+  MEDIA=0.723405553 s; deviatie standard=0.00766795308 s; calcul mediu=0.721569251 s; blocuri=1; verificare: OK
+CSV,blur,2000,2000,8,2,seq,-,-,1,4,5,0.723405553,0.00766795308,0.721569251
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.158207977 s; calcul=0.122303786 s
+  Rulare 2: 0.158757644 s; calcul=0.122570366 s
+  Rulare 3: 0.170355065 s; calcul=0.125043028 s
+  Rulare 4: 0.170063815 s; calcul=0.125586946 s
+  Rulare 5: 0.15920527 s; calcul=0.122272994 s
+  MEDIA=0.163317954 s; deviatie standard=0.00630178613 s; calcul mediu=0.123555424 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,8,2,mpi,1d,static,64,4,5,0.163317954,0.00630178613,0.123555424
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.124194214 s; calcul=0.114351793 s
+  Rulare 2: 0.134324885 s; calcul=0.118916669 s
+  Rulare 3: 0.122450505 s; calcul=0.113351043 s
+  Rulare 4: 0.122808588 s; calcul=0.113606376 s
+  Rulare 5: 0.121728754 s; calcul=0.112941169 s
+  MEDIA=0.125101389 s; deviatie standard=0.00523341748 s; calcul mediu=0.11463341 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,8,2,mpi,1d,dynamic,64,4,5,0.125101389,0.00523341748,0.11463341
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.155114976 s; calcul=0.120573663 s
+  Rulare 2: 0.159586186 s; calcul=0.121749244 s
+  Rulare 3: 0.160730103 s; calcul=0.122260283 s
+  Rulare 4: 0.158969936 s; calcul=0.122418492 s
+  Rulare 5: 0.159131561 s; calcul=0.121853953 s
+  MEDIA=0.158706552 s; deviatie standard=0.002122377 s; calcul mediu=0.121771127 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,8,2,mpi,2d,static,64,4,5,0.158706552,0.002122377,0.121771127
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.124781131 s; calcul=0.113761585 s
+  Rulare 2: 0.124039464 s; calcul=0.114081626 s
+  Rulare 3: 0.122578547 s; calcul=0.11375596 s
+  Rulare 4: 0.123432756 s; calcul=0.113669084 s
+  Rulare 5: 0.122671422 s; calcul=0.113539461 s
+  MEDIA=0.123500664 s; deviatie standard=0.000931726184 s; calcul mediu=0.113761543 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,8,2,mpi,2d,dynamic,64,4,5,0.123500664,0.000931726184,0.113761543
+
+Operatie: rotate; secvential
+  Rulare 1: 0.008397568 s; calcul=0.007051253 s
+  Rulare 2: 0.008273169 s; calcul=0.006991336 s
+  Rulare 3: 0.008232544 s; calcul=0.006949544 s
+  Rulare 4: 0.008387985 s; calcul=0.007014419 s
+  Rulare 5: 0.008299753 s; calcul=0.007023877 s
+  MEDIA=0.0083182038 s; deviatie standard=7.22396337e-05 s; calcul mediu=0.0070060858 s; blocuri=1; verificare: OK
+CSV,rotate,2000,2000,8,2,seq,-,-,1,0,5,0.0083182038,7.22396337e-05,0.0070060858
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.053097604 s; calcul=0.002376621 s
+  Rulare 2: 0.055428729 s; calcul=0.002525204 s
+  Rulare 3: 0.059611981 s; calcul=0.002470287 s
+  Rulare 4: 0.054676229 s; calcul=0.002878787 s
+  Rulare 5: 0.057573897 s; calcul=0.003666077 s
+  MEDIA=0.056077688 s; deviatie standard=0.00254931384 s; calcul mediu=0.0027833952 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,8,2,mpi,1d,static,64,0,5,0.056077688,0.00254931384,0.0027833952
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.053943146 s; calcul=0.001727788 s
+  Rulare 2: 0.052679145 s; calcul=0.001636288 s
+  Rulare 3: 0.054347105 s; calcul=0.001911164 s
+  Rulare 4: 0.05170077 s; calcul=0.00182683 s
+  Rulare 5: 0.065388442 s; calcul=0.00155479 s
+  MEDIA=0.0556117216 s; deviatie standard=0.00556469248 s; calcul mediu=0.001731372 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,8,2,mpi,1d,dynamic,64,0,5,0.0556117216,0.00556469248,0.001731372
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.057594522 s; calcul=0.003058204 s
+  Rulare 2: 0.057007396 s; calcul=0.002184873 s
+  Rulare 3: 0.05760323 s; calcul=0.002249787 s
+  Rulare 4: 0.056697646 s; calcul=0.002924748 s
+  Rulare 5: 0.062620733 s; calcul=0.002784161 s
+  MEDIA=0.0583047054 s; deviatie standard=0.00244387878 s; calcul mediu=0.0026403546 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,8,2,mpi,2d,static,64,0,5,0.0583047054,0.00244387878,0.0026403546
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.058051272 s; calcul=0.001604956 s
+  Rulare 2: 0.052788854 s; calcul=0.002300203 s
+  Rulare 3: 0.062597441 s; calcul=0.002121496 s
+  Rulare 4: 0.052853603 s; calcul=0.001707622 s
+  Rulare 5: 0.055467521 s; calcul=0.001809123 s
+  MEDIA=0.0563517382 s; deviatie standard=0.00411126964 s; calcul mediu=0.00190868 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,8,2,mpi,2d,dynamic,64,0,5,0.0563517382,0.00411126964,0.00190868
+### Imagine=imagini/input_6000x6000.ppm; p=2
+[Rank 0 on ubuntu1] Loaded imagini/input_6000x6000.ppm (6000x6000), 2 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.045899544 s; calcul=0.036175472 s
+  Rulare 2: 0.044517255 s; calcul=0.034699263 s
+  Rulare 3: 0.043002341 s; calcul=0.03381843 s
+  Rulare 4: 0.044145047 s; calcul=0.034657638 s
+  Rulare 5: 0.042882633 s; calcul=0.033860429 s
+  MEDIA=0.044089364 s; deviatie standard=0.001234986 s; calcul mediu=0.0346422464 s; blocuri=1; verificare: OK
+CSV,gray,6000,6000,2,2,seq,-,-,1,0,5,0.044089364,0.001234986,0.0346422464
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.39520536 s; calcul=0.036695389 s
+  Rulare 2: 0.393904108 s; calcul=0.036903349 s
+  Rulare 3: 0.389461607 s; calcul=0.036806394 s
+  Rulare 4: 0.390762399 s; calcul=0.036965557 s
+  Rulare 5: 0.394348901 s; calcul=0.036954061 s
+  MEDIA=0.392736475 s; deviatie standard=0.00248396931 s; calcul mediu=0.03686495 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,2,2,mpi,1d,static,64,0,5,0.392736475,0.00248396931,0.03686495
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.393508858 s; calcul=0.0367271 s
+  Rulare 2: 0.393189983 s; calcul=0.036545854 s
+  Rulare 3: 0.400825903 s; calcul=0.036583432 s
+  Rulare 4: 0.395864776 s; calcul=0.036662977 s
+  Rulare 5: 0.392592441 s; calcul=0.036551104 s
+  MEDIA=0.395196392 s; deviatie standard=0.0033834945 s; calcul mediu=0.0366140934 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,2,2,mpi,1d,dynamic,64,0,5,0.395196392,0.0033834945,0.0366140934
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.411772824 s; calcul=0.036718064 s
+  Rulare 2: 0.403856987 s; calcul=0.036939777 s
+  Rulare 3: 0.411214865 s; calcul=0.036969058 s
+  Rulare 4: 0.419066785 s; calcul=0.036840516 s
+  Rulare 5: 0.404886988 s; calcul=0.037043264 s
+  MEDIA=0.41015969 s; deviatie standard=0.00613549893 s; calcul mediu=0.0369021358 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,2,2,mpi,2d,static,64,0,5,0.41015969,0.00613549893,0.0369021358
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.4142722 s; calcul=0.036801195 s
+  Rulare 2: 0.410257865 s; calcul=0.036845935 s
+  Rulare 3: 0.407738072 s; calcul=0.036880603 s
+  Rulare 4: 0.412065866 s; calcul=0.03690581 s
+  Rulare 5: 0.407637697 s; calcul=0.036736221 s
+  MEDIA=0.41039434 s; deviatie standard=0.00285066936 s; calcul mediu=0.0368339528 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,2,2,mpi,2d,dynamic,64,0,5,0.41039434,0.00285066936,0.0368339528
+
+Operatie: blur; secvential
+  Rulare 1: 6.28302394 s; calcul=6.26315718 s
+  Rulare 2: 6.27323705 s; calcul=6.25291814 s
+  Rulare 3: 6.26547426 s; calcul=6.24635568 s
+  Rulare 4: 6.25867268 s; calcul=6.24068652 s
+  Rulare 5: 6.24736527 s; calcul=6.22972795 s
+  MEDIA=6.26555464 s; deviatie standard=0.0136236643 s; calcul mediu=6.24656909 s; blocuri=1; verificare: OK
+CSV,blur,6000,6000,2,2,seq,-,-,1,4,5,6.26555464,0.0136236643,6.24656909
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 6.73368897 s; calcul=6.244159 s
+  Rulare 2: 6.73187297 s; calcul=6.24248337 s
+  Rulare 3: 6.7263221 s; calcul=6.23211675 s
+  Rulare 4: 6.72806097 s; calcul=6.23205562 s
+  Rulare 5: 6.73968921 s; calcul=6.23881958 s
+  MEDIA=6.73192684 s; deviatie standard=0.00523737614 s; calcul mediu=6.23792686 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,2,2,mpi,1d,static,64,4,5,6.73192684,0.00523737614,6.23792686
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 6.7262731 s; calcul=6.23537599 s
+  Rulare 2: 6.71726494 s; calcul=6.22723165 s
+  Rulare 3: 6.7388278 s; calcul=6.23745493 s
+  Rulare 4: 6.75097902 s; calcul=6.25843029 s
+  Rulare 5: 6.79627853 s; calcul=6.28678689 s
+  MEDIA=6.74592468 s; deviatie standard=0.0308989811 s; calcul mediu=6.24905595 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,2,2,mpi,1d,dynamic,64,4,5,6.74592468,0.0308989811,6.24905595
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 6.81304632 s; calcul=6.30722289 s
+  Rulare 2: 6.76766373 s; calcul=6.26668037 s
+  Rulare 3: 6.75776042 s; calcul=6.25584261 s
+  Rulare 4: 6.74585591 s; calcul=6.24421915 s
+  Rulare 5: 6.74470688 s; calcul=6.23970304 s
+  MEDIA=6.76580665 s; deviatie standard=0.0280312757 s; calcul mediu=6.26273361 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,2,2,mpi,2d,static,64,4,5,6.76580665,0.0280312757,6.26273361
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 6.79144543 s; calcul=6.2923116 s
+  Rulare 2: 6.74880191 s; calcul=6.25428358 s
+  Rulare 3: 6.75899636 s; calcul=6.25942343 s
+  Rulare 4: 6.7486242 s; calcul=6.24202501 s
+  Rulare 5: 6.75274439 s; calcul=6.24279765 s
+  MEDIA=6.76012246 s; deviatie standard=0.0180083101 s; calcul mediu=6.25816825 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,2,2,mpi,2d,dynamic,64,4,5,6.76012246,0.0180083101,6.25816825
+
+Operatie: rotate; secvential
+  Rulare 1: 0.320945597 s; calcul=0.26741688 s
+  Rulare 2: 0.341386458 s; calcul=0.297754034 s
+  Rulare 3: 0.331189115 s; calcul=0.316447034 s
+  Rulare 4: 0.368909428 s; calcul=0.351701042 s
+  Rulare 5: 0.367576214 s; calcul=0.354069239 s
+  MEDIA=0.346001362 s; deviatie standard=0.021556583 s; calcul mediu=0.317477646 s; blocuri=1; verificare: OK
+CSV,rotate,6000,6000,2,2,seq,-,-,1,0,5,0.346001362,0.021556583,0.317477646
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.597222603 s; calcul=0.064397407 s
+  Rulare 2: 0.607071183 s; calcul=0.064111694 s
+  Rulare 3: 0.600551046 s; calcul=0.064171067 s
+  Rulare 4: 0.604409821 s; calcul=0.064270696 s
+  Rulare 5: 0.586356277 s; calcul=0.06410512 s
+  MEDIA=0.599122186 s; deviatie standard=0.00805859985 s; calcul mediu=0.0642111968 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,2,2,mpi,1d,static,64,0,5,0.599122186,0.00805859985,0.0642111968
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.599980299 s; calcul=0.063862362 s
+  Rulare 2: 0.601762499 s; calcul=0.064204401 s
+  Rulare 3: 0.601163002 s; calcul=0.063923236 s
+  Rulare 4: 0.601713124 s; calcul=0.063937201 s
+  Rulare 5: 0.598933471 s; calcul=0.0640287 s
+  MEDIA=0.600710479 s; deviatie standard=0.00122553462 s; calcul mediu=0.06399118 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,2,2,mpi,1d,dynamic,64,0,5,0.600710479,0.00122553462,0.06399118
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.617291554 s; calcul=0.063990237 s
+  Rulare 2: 0.605781939 s; calcul=0.063898103 s
+  Rulare 3: 0.611311582 s; calcul=0.064347276 s
+  Rulare 4: 0.611007124 s; calcul=0.063734272 s
+  Rulare 5: 0.609977129 s; calcul=0.063889146 s
+  MEDIA=0.611073866 s; deviatie standard=0.00412092013 s; calcul mediu=0.0639718068 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,2,2,mpi,2d,static,64,0,5,0.611073866,0.00412092013,0.0639718068
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.608231636 s; calcul=0.064170398 s
+  Rulare 2: 0.614980023 s; calcul=0.064153898 s
+  Rulare 3: 0.613496946 s; calcul=0.064181023 s
+  Rulare 4: 0.620446248 s; calcul=0.064058066 s
+  Rulare 5: 0.615472937 s; calcul=0.063821268 s
+  MEDIA=0.614525558 s; deviatie standard=0.00438263997 s; calcul mediu=0.0640769306 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,2,2,mpi,2d,dynamic,64,0,5,0.614525558,0.00438263997,0.0640769306
+### Imagine=imagini/input_2000x2000.ppm; p=4
+[Rank 0 on ubuntu1] Loaded imagini/input_2000x2000.ppm (2000x2000), 4 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.004550877 s; calcul=0.003779108 s
+  Rulare 2: 0.004294147 s; calcul=0.0037464 s
+  Rulare 3: 0.004363833 s; calcul=0.003753942 s
+  Rulare 4: 0.004233748 s; calcul=0.003652317 s
+  Rulare 5: 0.00425854 s; calcul=0.003714233 s
+  MEDIA=0.004340229 s; deviatie standard=0.000127538794 s; calcul mediu=0.0037292 s; blocuri=1; verificare: OK
+CSV,gray,2000,2000,4,2,seq,-,-,1,0,5,0.004340229,0.000127538794,0.0037292
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.036449253 s; calcul=0.001530306 s
+  Rulare 2: 0.035753755 s; calcul=0.001579557 s
+  Rulare 3: 0.035562794 s; calcul=0.001642477 s
+  Rulare 4: 0.035010997 s; calcul=0.001541013 s
+  Rulare 5: 0.037509896 s; calcul=0.001530388 s
+  MEDIA=0.036057339 s; deviatie standard=0.000961130585 s; calcul mediu=0.0015647482 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,4,2,mpi,1d,static,64,0,5,0.036057339,0.000961130585,0.0015647482
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.010353953 s; calcul=0.003256107 s
+  Rulare 2: 0.009134334 s; calcul=0.003172191 s
+  Rulare 3: 0.009353542 s; calcul=0.00328061 s
+  Rulare 4: 0.009878622 s; calcul=0.00323215 s
+  Rulare 5: 0.009001834 s; calcul=0.003286698 s
+  MEDIA=0.009544457 s; deviatie standard=0.000562592027 s; calcul mediu=0.0032455512 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,4,2,mpi,1d,dynamic,64,0,5,0.009544457,0.000562592027,0.0032455512
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.035842713 s; calcul=0.001501636 s
+  Rulare 2: 0.036201712 s; calcul=0.001591309 s
+  Rulare 3: 0.035789463 s; calcul=0.001647724 s
+  Rulare 4: 0.036132212 s; calcul=0.001547514 s
+  Rulare 5: 0.035165883 s; calcul=0.001551016 s
+  MEDIA=0.0358263966 s; deviatie standard=0.00040996745 s; calcul mediu=0.0015678398 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,4,2,mpi,2d,static,64,0,5,0.0358263966,0.00040996745,0.0015678398
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.009313629 s; calcul=0.003373067 s
+  Rulare 2: 0.011832197 s; calcul=0.003234818 s
+  Rulare 3: 0.009459589 s; calcul=0.003215649 s
+  Rulare 4: 0.009510373 s; calcul=0.00319774 s
+  Rulare 5: 0.009487631 s; calcul=0.003238982 s
+  MEDIA=0.0099206838 s; deviatie standard=0.00107131885 s; calcul mediu=0.0032520512 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,4,2,mpi,2d,dynamic,64,0,5,0.0099206838,0.00107131885,0.0032520512
+
+Operatie: blur; secvential
+  Rulare 1: 0.70830069 s; calcul=0.706264196 s
+  Rulare 2: 0.708874111 s; calcul=0.706924026 s
+  Rulare 3: 0.710116623 s; calcul=0.708265437 s
+  Rulare 4: 0.709780912 s; calcul=0.707191483 s
+  Rulare 5: 0.709845204 s; calcul=0.708228519 s
+  MEDIA=0.709383508 s; deviatie standard=0.000764939681 s; calcul mediu=0.707374732 s; blocuri=1; verificare: OK
+CSV,blur,2000,2000,4,2,seq,-,-,1,4,5,0.709383508,0.000764939681,0.707374732
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.296040598 s; calcul=0.242260997 s
+  Rulare 2: 0.298741822 s; calcul=0.244405432 s
+  Rulare 3: 0.296475265 s; calcul=0.242622794 s
+  Rulare 4: 0.29482043 s; calcul=0.242973086 s
+  Rulare 5: 0.296345514 s; calcul=0.242293539 s
+  MEDIA=0.296484726 s; deviatie standard=0.00142136226 s; calcul mediu=0.24291117 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,4,2,mpi,1d,static,64,4,5,0.296484726,0.00142136226,0.24291117
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.267127648 s; calcul=0.259811252 s
+  Rulare 2: 0.27311808 s; calcul=0.261785211 s
+  Rulare 3: 0.272274064 s; calcul=0.2609578 s
+  Rulare 4: 0.27472722 s; calcul=0.261826547 s
+  Rulare 5: 0.27021731 s; calcul=0.261470463 s
+  MEDIA=0.271492864 s; deviatie standard=0.00293235434 s; calcul mediu=0.261170255 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,4,2,mpi,1d,dynamic,64,4,5,0.271492864,0.00293235434,0.261170255
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.293543678 s; calcul=0.241546492 s
+  Rulare 2: 0.311969404 s; calcul=0.253120307 s
+  Rulare 3: 0.292195759 s; calcul=0.24220579 s
+  Rulare 4: 0.297397308 s; calcul=0.244787103 s
+  Rulare 5: 0.293859276 s; calcul=0.243354211 s
+  MEDIA=0.297793085 s; deviatie standard=0.00815455442 s; calcul mediu=0.245002781 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,4,2,mpi,2d,static,64,4,5,0.297793085,0.00815455442,0.245002781
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.265993846 s; calcul=0.25950175 s
+  Rulare 2: 0.270461387 s; calcul=0.259788545 s
+  Rulare 3: 0.266707352 s; calcul=0.260021339 s
+  Rulare 4: 0.26809864 s; calcul=0.259860713 s
+  Rulare 5: 0.265719262 s; calcul=0.258814335 s
+  MEDIA=0.267396097 s; deviatie standard=0.0019456376 s; calcul mediu=0.259597336 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,4,2,mpi,2d,dynamic,64,4,5,0.267396097,0.0019456376,0.259597336
+
+Operatie: rotate; secvential
+  Rulare 1: 0.008237119 s; calcul=0.006907427 s
+  Rulare 2: 0.008261953 s; calcul=0.006969468 s
+  Rulare 3: 0.008352829 s; calcul=0.006984802 s
+  Rulare 4: 0.008467955 s; calcul=0.006969093 s
+  Rulare 5: 0.008529581 s; calcul=0.006959552 s
+  MEDIA=0.0083698874 s; deviatie standard=0.000127168758 s; calcul mediu=0.0069580684 s; blocuri=1; verificare: OK
+CSV,rotate,2000,2000,4,2,seq,-,-,1,0,5,0.0083698874,0.000127168758,0.0069580684
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.052470451 s; calcul=0.003450241 s
+  Rulare 2: 0.052881535 s; calcul=0.003319241 s
+  Rulare 3: 0.058340377 s; calcul=0.003275531 s
+  Rulare 4: 0.053112543 s; calcul=0.003382403 s
+  Rulare 5: 0.053237286 s; calcul=0.00308103 s
+  MEDIA=0.0540084384 s; deviatie standard=0.00243917574 s; calcul mediu=0.0033016892 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,4,2,mpi,1d,static,64,0,5,0.0540084384,0.00243917574,0.0033016892
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.048502583 s; calcul=0.002982195 s
+  Rulare 2: 0.047810819 s; calcul=0.00293732 s
+  Rulare 3: 0.048611029 s; calcul=0.003057069 s
+  Rulare 4: 0.048415945 s; calcul=0.003114322 s
+  Rulare 5: 0.047357068 s; calcul=0.002988902 s
+  MEDIA=0.0481394888 s; deviatie standard=0.000536381798 s; calcul mediu=0.0030159616 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,4,2,mpi,1d,dynamic,64,0,5,0.0481394888,0.000536381798,0.0030159616
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.053129286 s; calcul=0.003386448 s
+  Rulare 2: 0.057400542 s; calcul=0.0032857 s
+  Rulare 3: 0.053800008 s; calcul=0.003404404 s
+  Rulare 4: 0.051566617 s; calcul=0.003342907 s
+  Rulare 5: 0.052663622 s; calcul=0.003352366 s
+  MEDIA=0.053712015 s; deviatie standard=0.0022166646 s; calcul mediu=0.003354365 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,4,2,mpi,2d,static,64,0,5,0.053712015,0.0022166646,0.003354365
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.048664446 s; calcul=0.003047026 s
+  Rulare 2: 0.050037197 s; calcul=0.003082652 s
+  Rulare 3: 0.051072241 s; calcul=0.003170281 s
+  Rulare 4: 0.049032279 s; calcul=0.003104656 s
+  Rulare 5: 0.049817387 s; calcul=0.003110614 s
+  MEDIA=0.04972471 s; deviatie standard=0.000938842024 s; calcul mediu=0.0031030458 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,4,2,mpi,2d,dynamic,64,0,5,0.04972471,0.000938842024,0.0031030458
+### Imagine=imagini/input_6000x6000.ppm; p=1
+[Rank 0 on ubuntu1] Loaded imagini/input_6000x6000.ppm (6000x6000), 1 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+
+Operatie: gray; secvential
+  Rulare 1: 0.041520185 s; calcul=0.033076465 s
+  Rulare 2: 0.041337268 s; calcul=0.032949506 s
+  Rulare 3: 0.041345311 s; calcul=0.032970507 s
+  Rulare 4: 0.041619436 s; calcul=0.03306909 s
+  Rulare 5: 0.041522936 s; calcul=0.033154965 s
+  MEDIA=0.0414690272 s; deviatie standard=0.000123300721 s; calcul mediu=0.0330441066 s; blocuri=1; verificare: OK
+CSV,gray,6000,6000,1,1,seq,-,-,1,0,5,0.0414690272,0.000123300721,0.0330441066
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.039356308 s; calcul=0.033984256 s
+  Rulare 2: 0.038749348 s; calcul=0.033405964 s
+  Rulare 3: 0.038408889 s; calcul=0.03336572 s
+  Rulare 4: 0.038380348 s; calcul=0.033381257 s
+  Rulare 5: 0.03823818 s; calcul=0.033258921 s
+  MEDIA=0.0386266146 s; deviatie standard=0.000449012544 s; calcul mediu=0.0334792236 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,1,1,mpi,1d,static,64,0,5,0.0386266146,0.000449012544,0.0334792236
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.038575514 s; calcul=0.033484882 s
+  Rulare 2: 0.038370347 s; calcul=0.033282135 s
+  Rulare 3: 0.038323265 s; calcul=0.033234503 s
+  Rulare 4: 0.038299639 s; calcul=0.0332388 s
+  Rulare 5: 0.038361598 s; calcul=0.033320794 s
+  MEDIA=0.0383860726 s; deviatie standard=0.000109715435 s; calcul mediu=0.0333122228 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,1,1,mpi,1d,dynamic,64,0,5,0.0383860726,0.000109715435,0.0333122228
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.047080777 s; calcul=0.033466546 s
+  Rulare 2: 0.047507736 s; calcul=0.033491337 s
+  Rulare 3: 0.047509194 s; calcul=0.033711382 s
+  Rulare 4: 0.047380152 s; calcul=0.03371692 s
+  Rulare 5: 0.047018527 s; calcul=0.033367296 s
+  MEDIA=0.0472992772 s; deviatie standard=0.000234853082 s; calcul mediu=0.0335506962 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,1,1,mpi,2d,static,64,0,5,0.0472992772,0.000234853082,0.0335506962
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.048093445 s; calcul=0.034025466 s
+  Rulare 2: 0.047686486 s; calcul=0.033598635 s
+  Rulare 3: 0.047380319 s; calcul=0.033757551 s
+  Rulare 4: 0.047063318 s; calcul=0.033519215 s
+  Rulare 5: 0.04701761 s; calcul=0.033497169 s
+  MEDIA=0.0474482356 s; deviatie standard=0.000450352932 s; calcul mediu=0.0336796072 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,1,1,mpi,2d,dynamic,64,0,5,0.0474482356,0.000450352932,0.0336796072
+
+Operatie: blur; secvential
+  Rulare 1: 6.19398535 s; calcul=6.15552096 s
+  Rulare 2: 6.14680962 s; calcul=6.13325968 s
+  Rulare 3: 6.14616228 s; calcul=6.13248447 s
+  Rulare 4: 6.14350436 s; calcul=6.12807205 s
+  Rulare 5: 6.14633632 s; calcul=6.13109855 s
+  MEDIA=6.15535959 s; deviatie standard=0.0216310412 s; calcul mediu=6.13608714 s; blocuri=1; verificare: OK
+CSV,blur,6000,6000,1,1,seq,-,-,1,4,5,6.15535959,0.0216310412,6.13608714
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 6.15560384 s; calcul=6.14493674 s
+  Rulare 2: 6.18862025 s; calcul=6.17667136 s
+  Rulare 3: 6.16528425 s; calcul=6.15349381 s
+  Rulare 4: 6.1734839 s; calcul=6.16144362 s
+  Rulare 5: 6.16645976 s; calcul=6.15491652 s
+  MEDIA=6.1698904 s; deviatie standard=0.0122557363 s; calcul mediu=6.15829241 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,1,1,mpi,1d,static,64,4,5,6.1698904,0.0122557363,6.15829241
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 6.15295934 s; calcul=6.14190232 s
+  Rulare 2: 6.14926309 s; calcul=6.13705135 s
+  Rulare 3: 6.15717911 s; calcul=6.1448902 s
+  Rulare 4: 6.17081889 s; calcul=6.15828807 s
+  Rulare 5: 6.14832721 s; calcul=6.13605097 s
+  MEDIA=6.15570953 s; deviatie standard=0.0091388087 s; calcul mediu=6.14363658 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,1,1,mpi,1d,dynamic,64,4,5,6.15570953,0.0091388087,6.14363658
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 6.15508373 s; calcul=6.12377685 s
+  Rulare 2: 6.13232408 s; calcul=6.10100455 s
+  Rulare 3: 6.15038713 s; calcul=6.1188828 s
+  Rulare 4: 6.14900471 s; calcul=6.1175128 s
+  Rulare 5: 6.14135169 s; calcul=6.10954082 s
+  MEDIA=6.14563027 s; deviatie standard=0.00892669118 s; calcul mediu=6.11414356 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,1,1,mpi,2d,static,64,4,5,6.14563027,0.00892669118,6.11414356
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 6.14955559 s; calcul=6.11760621 s
+  Rulare 2: 6.10956215 s; calcul=6.07859057 s
+  Rulare 3: 6.18083542 s; calcul=6.14812217 s
+  Rulare 4: 6.18667068 s; calcul=6.15487873 s
+  Rulare 5: 6.19009459 s; calcul=6.15838696 s
+  MEDIA=6.16334369 s; deviatie standard=0.0340891701 s; calcul mediu=6.13151693 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,1,1,mpi,2d,dynamic,64,4,5,6.16334369,0.0340891701,6.13151693
+
+Operatie: rotate; secvential
+  Rulare 1: 0.351693616 s; calcul=0.338631907 s
+  Rulare 2: 0.327682871 s; calcul=0.312089987 s
+  Rulare 3: 0.348426481 s; calcul=0.335379938 s
+  Rulare 4: 0.349214109 s; calcul=0.334532018 s
+  Rulare 5: 0.349199984 s; calcul=0.335370563 s
+  MEDIA=0.345243412 s; deviatie standard=0.00989356554 s; calcul mediu=0.331200883 s; blocuri=1; verificare: OK
+CSV,rotate,6000,6000,1,1,seq,-,-,1,0,5,0.345243412,0.00989356554,0.331200883
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.079887013 s; calcul=0.060477193 s
+  Rulare 2: 0.080554057 s; calcul=0.059918996 s
+  Rulare 3: 0.079608971 s; calcul=0.06001144 s
+  Rulare 4: 0.079291678 s; calcul=0.060016661 s
+  Rulare 5: 0.078833468 s; calcul=0.059833326 s
+  MEDIA=0.0796350374 s; deviatie standard=0.000645983236 s; calcul mediu=0.0600515232 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,1,1,mpi,1d,static,64,0,5,0.0796350374,0.000645983236,0.0600515232
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.079437137 s; calcul=0.059994074 s
+  Rulare 2: 0.079631262 s; calcul=0.059965575 s
+  Rulare 3: 0.078724218 s; calcul=0.059754577 s
+  Rulare 4: 0.078810884 s; calcul=0.05985357 s
+  Rulare 5: 0.079776596 s; calcul=0.06027199 s
+  MEDIA=0.0792760194 s; deviatie standard=0.000480512446 s; calcul mediu=0.0599679572 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,1,1,mpi,1d,dynamic,64,0,5,0.0792760194,0.000480512446,0.0599679572
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.084428986 s; calcul=0.05984324 s
+  Rulare 2: 0.083418358 s; calcul=0.059169531 s
+  Rulare 3: 0.084717529 s; calcul=0.060101444 s
+  Rulare 4: 0.087301287 s; calcul=0.061807706 s
+  Rulare 5: 0.084464154 s; calcul=0.060122535 s
+  MEDIA=0.0848660628 s; deviatie standard=0.00144920627 s; calcul mediu=0.0602088912 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,1,1,mpi,2d,static,64,0,5,0.0848660628,0.00144920627,0.0602088912
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.085521573 s; calcul=0.06038774 s
+  Rulare 2: 0.088939627 s; calcul=0.063280711 s
+  Rulare 3: 0.08388086 s; calcul=0.059689945 s
+  Rulare 4: 0.084946614 s; calcul=0.060520701 s
+  Rulare 5: 0.090132339 s; calcul=0.064589467 s
+  MEDIA=0.0866842026 s; deviatie standard=0.00270213968 s; calcul mediu=0.0616937128 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,1,1,mpi,2d,dynamic,64,0,5,0.0866842026,0.00270213968,0.0616937128
+### Imagine=imagini/input_4000x4000.ppm; p=1
+[Rank 0 on ubuntu1] Loaded imagini/input_4000x4000.ppm (4000x4000), 1 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+
+Operatie: gray; secvential
+  Rulare 1: 0.020367858 s; calcul=0.015837802 s
+  Rulare 2: 0.018819062 s; calcul=0.01500705 s
+  Rulare 3: 0.018490144 s; calcul=0.014866091 s
+  Rulare 4: 0.018542811 s; calcul=0.014427006 s
+  Rulare 5: 0.018859937 s; calcul=0.015055217 s
+  MEDIA=0.0190159624 s; deviatie standard=0.000773157915 s; calcul mediu=0.0150386332 s; blocuri=1; verificare: OK
+CSV,gray,4000,4000,1,1,seq,-,-,1,0,5,0.0190159624,0.000773157915,0.0150386332
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.016420221 s; calcul=0.014488132 s
+  Rulare 2: 0.016559429 s; calcul=0.014758631 s
+  Rulare 3: 0.016533055 s; calcul=0.014792714 s
+  Rulare 4: 0.016270887 s; calcul=0.014558259 s
+  Rulare 5: 0.016289054 s; calcul=0.014548964 s
+  MEDIA=0.0164145292 s; deviatie standard=0.000133654238 s; calcul mediu=0.01462934 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,1,1,mpi,1d,static,64,0,5,0.0164145292,0.000133654238,0.01462934
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.016093553 s; calcul=0.014225419 s
+  Rulare 2: 0.016301137 s; calcul=0.014561546 s
+  Rulare 3: 0.01600222 s; calcul=0.014299796 s
+  Rulare 4: 0.016117553 s; calcul=0.014408794 s
+  Rulare 5: 0.016013303 s; calcul=0.014301759 s
+  MEDIA=0.0161055532 s; deviatie standard=0.000120134167 s; calcul mediu=0.0143594628 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,1,1,mpi,1d,dynamic,64,0,5,0.0161055532,0.000120134167,0.0143594628
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.019413147 s; calcul=0.014750418 s
+  Rulare 2: 0.018988021 s; calcul=0.01452067 s
+  Rulare 3: 0.019466648 s; calcul=0.014710093 s
+  Rulare 4: 0.019307314 s; calcul=0.014441587 s
+  Rulare 5: 0.019133063 s; calcul=0.014400964 s
+  MEDIA=0.0192616386 s; deviatie standard=0.000199040302 s; calcul mediu=0.0145647464 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,1,1,mpi,2d,static,64,0,5,0.0192616386,0.000199040302,0.0145647464
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.01880177 s; calcul=0.014472467 s
+  Rulare 2: 0.01885577 s; calcul=0.014455009 s
+  Rulare 3: 0.018855188 s; calcul=0.01443834 s
+  Rulare 4: 0.019254188 s; calcul=0.014660884 s
+  Rulare 5: 0.018681936 s; calcul=0.014332709 s
+  MEDIA=0.0188897704 s; deviatie standard=0.000215691542 s; calcul mediu=0.0144718818 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,1,1,mpi,2d,dynamic,64,0,5,0.0188897704,0.000215691542,0.0144718818
+
+Operatie: blur; secvential
+  Rulare 1: 2.73033491 s; calcul=2.72399551 s
+  Rulare 2: 2.72907399 s; calcul=2.72234568 s
+  Rulare 3: 2.73207237 s; calcul=2.72323214 s
+  Rulare 4: 2.72958082 s; calcul=2.72012763 s
+  Rulare 5: 2.72943074 s; calcul=2.7206073 s
+  MEDIA=2.73009857 s; deviatie standard=0.00119536412 s; calcul mediu=2.72206165 s; blocuri=1; verificare: OK
+CSV,blur,4000,4000,1,1,seq,-,-,1,4,5,2.73009857,0.00119536412,2.72206165
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 2.72650348 s; calcul=2.72104175 s
+  Rulare 2: 2.72741678 s; calcul=2.72225022 s
+  Rulare 3: 2.72661402 s; calcul=2.72135043 s
+  Rulare 4: 2.72896132 s; calcul=2.72350747 s
+  Rulare 5: 2.73023466 s; calcul=2.72467173 s
+  MEDIA=2.72794605 s; deviatie standard=0.00161275736 s; calcul mediu=2.72256432 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,1,1,mpi,1d,static,64,4,5,2.72794605,0.00161275736,2.72256432
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 2.72716553 s; calcul=2.72187501 s
+  Rulare 2: 2.7290162 s; calcul=2.7241553 s
+  Rulare 3: 2.73118229 s; calcul=2.72615368 s
+  Rulare 4: 2.73510139 s; calcul=2.72936194 s
+  Rulare 5: 2.73269046 s; calcul=2.72743244 s
+  MEDIA=2.73103117 s; deviatie standard=0.00309620968 s; calcul mediu=2.72579568 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,1,1,mpi,1d,dynamic,64,4,5,2.73103117,0.00309620968,2.72579568
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 2.7532469 s; calcul=2.74115836 s
+  Rulare 2: 2.74365533 s; calcul=2.73133578 s
+  Rulare 3: 2.75042506 s; calcul=2.73869181 s
+  Rulare 4: 2.74053165 s; calcul=2.72758753 s
+  Rulare 5: 2.74514421 s; calcul=2.73253459 s
+  MEDIA=2.74660063 s; deviatie standard=0.00515818921 s; calcul mediu=2.73426162 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,1,1,mpi,2d,static,64,4,5,2.74660063,0.00515818921,2.73426162
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 2.74875589 s; calcul=2.73654023 s
+  Rulare 2: 2.74102115 s; calcul=2.72925795 s
+  Rulare 3: 2.74252258 s; calcul=2.73030745 s
+  Rulare 4: 2.74539296 s; calcul=2.73285338 s
+  Rulare 5: 2.74298733 s; calcul=2.7306297 s
+  MEDIA=2.74413598 s; deviatie standard=0.00302275395 s; calcul mediu=2.73191774 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,1,1,mpi,2d,dynamic,64,4,5,2.74413598,0.00302275395,2.73191774
+
+Operatie: rotate; secvential
+  Rulare 1: 0.04536115 s; calcul=0.039055587 s
+  Rulare 2: 0.044964482 s; calcul=0.038718211 s
+  Rulare 3: 0.044418938 s; calcul=0.038245209 s
+  Rulare 4: 0.043958019 s; calcul=0.037779958 s
+  Rulare 5: 0.043971436 s; calcul=0.037810499 s
+  MEDIA=0.044534805 s; deviatie standard=0.000618659895 s; calcul mediu=0.0383218928 s; blocuri=1; verificare: OK
+CSV,rotate,4000,4000,1,1,seq,-,-,1,0,5,0.044534805,0.000618659895,0.0383218928
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.034243363 s; calcul=0.026471006 s
+  Rulare 2: 0.034052654 s; calcul=0.026313008 s
+  Rulare 3: 0.033696736 s; calcul=0.026104748 s
+  Rulare 4: 0.033612277 s; calcul=0.026223839 s
+  Rulare 5: 0.033575027 s; calcul=0.026170752 s
+  MEDIA=0.0338360114 s; deviatie standard=0.000295988563 s; calcul mediu=0.0262566706 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,1,1,mpi,1d,static,64,0,5,0.0338360114,0.000295988563,0.0262566706
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.034176821 s; calcul=0.026320878 s
+  Rulare 2: 0.033934362 s; calcul=0.026382379 s
+  Rulare 3: 0.034646905 s; calcul=0.026676798 s
+  Rulare 4: 0.033998945 s; calcul=0.026185215 s
+  Rulare 5: 0.033914528 s; calcul=0.026230338 s
+  MEDIA=0.0341343122 s; deviatie standard=0.000304617725 s; calcul mediu=0.0263591216 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,1,1,mpi,1d,dynamic,64,0,5,0.0341343122,0.000304617725,0.0263591216
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.035672118 s; calcul=0.026203878 s
+  Rulare 2: 0.035784326 s; calcul=0.026261749 s
+  Rulare 3: 0.035581825 s; calcul=0.026073994 s
+  Rulare 4: 0.035413616 s; calcul=0.026079127 s
+  Rulare 5: 0.035531867 s; calcul=0.026054997 s
+  MEDIA=0.0355967504 s; deviatie standard=0.00014038849 s; calcul mediu=0.026134749 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,1,1,mpi,2d,static,64,0,5,0.0355967504,0.00014038849,0.026134749
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.036171661 s; calcul=0.026257923 s
+  Rulare 2: 0.035453367 s; calcul=0.02604796 s
+  Rulare 3: 0.035472284 s; calcul=0.026119126 s
+  Rulare 4: 0.035326908 s; calcul=0.026061623 s
+  Rulare 5: 0.035366867 s; calcul=0.02603259 s
+  MEDIA=0.0355582174 s; deviatie standard=0.000348141573 s; calcul mediu=0.0261038444 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,1,1,mpi,2d,dynamic,64,0,5,0.0355582174,0.000348141573,0.0261038444
+### Imagine=imagini/input_4000x4000.ppm; p=16
+[Rank 0 on ubuntu1] Loaded imagini/input_4000x4000.ppm (4000x4000), 16 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+  4: ubuntu1
+  5: ubuntu2
+  6: ubuntu1
+  7: ubuntu2
+  8: ubuntu1
+  9: ubuntu2
+  10: ubuntu1
+  11: ubuntu2
+  12: ubuntu1
+  13: ubuntu2
+  14: ubuntu1
+  15: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.041966763 s; calcul=0.031782563 s
+  Rulare 2: 0.054455126 s; calcul=0.030581184 s
+  Rulare 3: 0.037395545 s; calcul=0.018256435 s
+  Rulare 4: 0.039974384 s; calcul=0.028017717 s
+  Rulare 5: 0.035616201 s; calcul=0.018267852 s
+  MEDIA=0.0418816038 s; deviatie standard=0.00743502178 s; calcul mediu=0.0253811502 s; blocuri=1; verificare: OK
+CSV,gray,4000,4000,16,2,seq,-,-,1,0,5,0.0418816038,0.00743502178,0.0253811502
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.382262676 s; calcul=0.007327566 s
+  Rulare 2: 0.393636255 s; calcul=0.006174306 s
+  Rulare 3: 0.41535441 s; calcul=0.00557093 s
+  Rulare 4: 0.368284047 s; calcul=0.004428969 s
+  Rulare 5: 0.38388914 s; calcul=0.004986928 s
+  MEDIA=0.388685306 s; deviatie standard=0.0174371569 s; calcul mediu=0.0056977398 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,16,2,mpi,1d,static,64,0,5,0.388685306,0.0174371569,0.0056977398
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.411585189 s; calcul=0.013896546 s
+  Rulare 2: 0.379610207 s; calcul=0.005972057 s
+  Rulare 3: 0.407647718 s; calcul=0.006761223 s
+  Rulare 4: 0.413837786 s; calcul=0.009873241 s
+  Rulare 5: 0.42755615 s; calcul=0.005678144 s
+  MEDIA=0.40804741 s; deviatie standard=0.0175746233 s; calcul mediu=0.0084362422 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,16,2,mpi,1d,dynamic,64,0,5,0.40804741,0.0175746233,0.0084362422
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.389393771 s; calcul=0.005045012 s
+  Rulare 2: 0.397723476 s; calcul=0.009421731 s
+  Rulare 3: 0.389977951 s; calcul=0.008296812 s
+  Rulare 4: 0.389723117 s; calcul=0.009068229 s
+  Rulare 5: 0.423802142 s; calcul=0.005238513 s
+  MEDIA=0.398124091 s; deviatie standard=0.0147705555 s; calcul mediu=0.0074140594 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,16,2,mpi,2d,static,64,0,5,0.398124091,0.0147705555,0.0074140594
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.442503082 s; calcul=0.006681016 s
+  Rulare 2: 0.393266503 s; calcul=0.006166763 s
+  Rulare 3: 0.446166178 s; calcul=0.004471426 s
+  Rulare 4: 0.36016877 s; calcul=0.009614782 s
+  Rulare 5: 0.45922289 s; calcul=0.009019145 s
+  MEDIA=0.420265485 s; deviatie standard=0.0419034492 s; calcul mediu=0.0071906264 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,16,2,mpi,2d,dynamic,64,0,5,0.420265485,0.0419034492,0.0071906264
+
+Operatie: blur; secvential
+  Rulare 1: 4.08014598 s; calcul=4.05988087 s
+  Rulare 2: 4.04841075 s; calcul=4.02949356 s
+  Rulare 3: 3.96225333 s; calcul=3.94106606 s
+  Rulare 4: 4.07251706 s; calcul=4.04974401 s
+  Rulare 5: 4.03560647 s; calcul=4.0189679 s
+  MEDIA=4.03978672 s; deviatie standard=0.046913272 s; calcul mediu=4.01983048 s; blocuri=1; verificare: OK
+CSV,blur,4000,4000,16,2,seq,-,-,1,4,5,4.03978672,0.046913272,4.01983048
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.795189411 s; calcul=0.350662286 s
+  Rulare 2: 0.862454591 s; calcul=0.35302262 s
+  Rulare 3: 0.872618392 s; calcul=0.455228709 s
+  Rulare 4: 0.931774611 s; calcul=0.419758474 s
+  Rulare 5: 0.833746017 s; calcul=0.433371627 s
+  MEDIA=0.859156604 s; deviatie standard=0.0505048787 s; calcul mediu=0.402408743 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,16,2,mpi,1d,static,64,4,5,0.859156604,0.0505048787,0.402408743
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.587509877 s; calcul=0.345593788 s
+  Rulare 2: 0.59163892 s; calcul=0.349433421 s
+  Rulare 3: 0.614717428 s; calcul=0.338008856 s
+  Rulare 4: 0.632994009 s; calcul=0.336566688 s
+  Rulare 5: 0.573947518 s; calcul=0.320339948 s
+  MEDIA=0.60016155 s; deviatie standard=0.0235038267 s; calcul mediu=0.33798854 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,16,2,mpi,1d,dynamic,64,4,5,0.60016155,0.0235038267,0.33798854
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.780946239 s; calcul=0.387010949 s
+  Rulare 2: 0.738778691 s; calcul=0.334525142 s
+  Rulare 3: 0.726992977 s; calcul=0.341451655 s
+  Rulare 4: 0.728888295 s; calcul=0.341767737 s
+  Rulare 5: 0.742514549 s; calcul=0.337569188 s
+  MEDIA=0.74362415 s; deviatie standard=0.0218597195 s; calcul mediu=0.348464934 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,16,2,mpi,2d,static,64,4,5,0.74362415,0.0218597195,0.348464934
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.600138526 s; calcul=0.345902496 s
+  Rulare 2: 0.630592167 s; calcul=0.362202902 s
+  Rulare 3: 0.678471718 s; calcul=0.390945372 s
+  Rulare 4: 0.551065223 s; calcul=0.368585123 s
+  Rulare 5: 0.466955604 s; calcul=0.355099179 s
+  MEDIA=0.585444648 s; deviatie standard=0.0808236393 s; calcul mediu=0.364547014 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,16,2,mpi,2d,dynamic,64,4,5,0.585444648,0.0808236393,0.364547014
+
+Operatie: rotate; secvential
+  Rulare 1: 0.077814582 s; calcul=0.062040453 s
+  Rulare 2: 0.115766871 s; calcul=0.101226778 s
+  Rulare 3: 0.079851169 s; calcul=0.064657082 s
+  Rulare 4: 0.080876671 s; calcul=0.063810497 s
+  Rulare 5: 0.088197628 s; calcul=0.076368355 s
+  MEDIA=0.0885013842 s; deviatie standard=0.0157374494 s; calcul mediu=0.073620633 s; blocuri=1; verificare: OK
+CSV,rotate,4000,4000,16,2,seq,-,-,1,0,5,0.0885013842,0.0157374494,0.073620633
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.362491154 s; calcul=0.011002604 s
+  Rulare 2: 0.330886659 s; calcul=0.011712983 s
+  Rulare 3: 0.435040089 s; calcul=0.009401061 s
+  Rulare 4: 0.804062246 s; calcul=0.007548473 s
+  Rulare 5: 0.787514336 s; calcul=0.017092578 s
+  MEDIA=0.543998897 s; deviatie standard=0.233005699 s; calcul mediu=0.0113515398 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,16,2,mpi,1d,static,64,0,5,0.543998897,0.233005699,0.0113515398
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.615423181 s; calcul=0.014319905 s
+  Rulare 2: 0.574914895 s; calcul=0.02036383 s
+  Rulare 3: 0.545616865 s; calcul=0.006349471 s
+  Rulare 4: 0.621589276 s; calcul=0.008849185 s
+  Rulare 5: 0.580663106 s; calcul=0.010893271 s
+  MEDIA=0.587641465 s; deviatie standard=0.0312290238 s; calcul mediu=0.0121551324 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,16,2,mpi,1d,dynamic,64,0,5,0.587641465,0.0312290238,0.0121551324
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.586359618 s; calcul=0.009681687 s
+  Rulare 2: 0.606363204 s; calcul=0.010462355 s
+  Rulare 3: 0.563403789 s; calcul=0.007732184 s
+  Rulare 4: 0.577730191 s; calcul=0.006997348 s
+  Rulare 5: 0.562307745 s; calcul=0.011003106 s
+  MEDIA=0.579232909 s; deviatie standard=0.0182079877 s; calcul mediu=0.009175336 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,16,2,mpi,2d,static,64,0,5,0.579232909,0.0182079877,0.009175336
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.588211587 s; calcul=0.005632718 s
+  Rulare 2: 0.625329074 s; calcul=0.011727814 s
+  Rulare 3: 0.692546787 s; calcul=0.007969723 s
+  Rulare 4: 0.662006062 s; calcul=0.009999145 s
+  Rulare 5: 0.582803076 s; calcul=0.00809939 s
+  MEDIA=0.630179317 s; deviatie standard=0.0472545406 s; calcul mediu=0.008685758 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,16,2,mpi,2d,dynamic,64,0,5,0.630179317,0.0472545406,0.008685758
+### Imagine=imagini/input_2000x2000.ppm; p=1
+[Rank 0 on ubuntu1] Loaded imagini/input_2000x2000.ppm (2000x2000), 1 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+
+Operatie: gray; secvential
+  Rulare 1: 0.004865134 s; calcul=0.003694965 s
+  Rulare 2: 0.004271508 s; calcul=0.003712007 s
+  Rulare 3: 0.004373509 s; calcul=0.003838674 s
+  Rulare 4: 0.00426905 s; calcul=0.00364084 s
+  Rulare 5: 0.004252341 s; calcul=0.003709507 s
+  MEDIA=0.0044063084 s; deviatie standard=0.00026091843 s; calcul mediu=0.0037191986 s; blocuri=1; verificare: OK
+CSV,gray,2000,2000,1,1,seq,-,-,1,0,5,0.0044063084,0.00026091843,0.0037191986
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.004212925 s; calcul=0.003737344 s
+  Rulare 2: 0.004112008 s; calcul=0.003634801 s
+  Rulare 3: 0.004090883 s; calcul=0.003622676 s
+  Rulare 4: 0.004396175 s; calcul=0.003880095 s
+  Rulare 5: 0.004344759 s; calcul=0.00382876 s
+  MEDIA=0.00423135 s; deviatie standard=0.000136328513 s; calcul mediu=0.0037407352 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,1,1,mpi,1d,static,64,0,5,0.00423135,0.000136328513,0.0037407352
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.004361342 s; calcul=0.003855253 s
+  Rulare 2: 0.004184217 s; calcul=0.003687547 s
+  Rulare 3: 0.004537175 s; calcul=0.003943176 s
+  Rulare 4: 0.004154924 s; calcul=0.003611386 s
+  Rulare 5: 0.0042753 s; calcul=0.003711174 s
+  MEDIA=0.0043025916 s; deviatie standard=0.000154146098 s; calcul mediu=0.0037617072 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,1,1,mpi,1d,dynamic,64,0,5,0.0043025916,0.000154146098,0.0037617072
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.005072885 s; calcul=0.004010961 s
+  Rulare 2: 0.004626926 s; calcul=0.003804296 s
+  Rulare 3: 0.004562926 s; calcul=0.00379222 s
+  Rulare 4: 0.004671967 s; calcul=0.003736087 s
+  Rulare 5: 0.00444255 s; calcul=0.00370792 s
+  MEDIA=0.0046754508 s; deviatie standard=0.000238340801 s; calcul mediu=0.0038102968 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,1,1,mpi,2d,static,64,0,5,0.0046754508,0.000238340801,0.0038102968
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.004811301 s; calcul=0.003904218 s
+  Rulare 2: 0.005008593 s; calcul=0.003822712 s
+  Rulare 3: 0.00511001 s; calcul=0.003742885 s
+  Rulare 4: 0.004458258 s; calcul=0.003705168 s
+  Rulare 5: 0.004500717 s; calcul=0.003730548 s
+  MEDIA=0.0047777758 s; deviatie standard=0.000293101214 s; calcul mediu=0.0037811062 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,1,1,mpi,2d,dynamic,64,0,5,0.0047777758,0.000293101214,0.0037811062
+
+Operatie: blur; secvential
+  Rulare 1: 0.696036668 s; calcul=0.69451379 s
+  Rulare 2: 0.693977206 s; calcul=0.692520912 s
+  Rulare 3: 0.68552669 s; calcul=0.683882895 s
+  Rulare 4: 0.683473436 s; calcul=0.681629349 s
+  Rulare 5: 0.688458487 s; calcul=0.686906984 s
+  MEDIA=0.689494497 s; deviatie standard=0.00538434458 s; calcul mediu=0.687890786 s; blocuri=1; verificare: OK
+CSV,blur,2000,2000,1,1,seq,-,-,1,4,5,0.689494497,0.00538434458,0.687890786
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.681291932 s; calcul=0.679955635 s
+  Rulare 2: 0.684508563 s; calcul=0.683280519 s
+  Rulare 3: 0.681691099 s; calcul=0.680410975 s
+  Rulare 4: 0.680778348 s; calcul=0.679387388 s
+  Rulare 5: 0.683463811 s; calcul=0.68210468 s
+  MEDIA=0.682346751 s; deviatie standard=0.00157509244 s; calcul mediu=0.681027839 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,1,1,mpi,1d,static,64,4,5,0.682346751,0.00157509244,0.681027839
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.682566268 s; calcul=0.68126801 s
+  Rulare 2: 0.684777521 s; calcul=0.683550186 s
+  Rulare 3: 0.683872937 s; calcul=0.682659972 s
+  Rulare 4: 0.681904724 s; calcul=0.680382477 s
+  Rulare 5: 0.682685268 s; calcul=0.681482302 s
+  MEDIA=0.683161344 s; deviatie standard=0.00114872215 s; calcul mediu=0.681868589 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,1,1,mpi,1d,dynamic,64,4,5,0.683161344,0.00114872215,0.681868589
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.695791626 s; calcul=0.693187279 s
+  Rulare 2: 0.690394449 s; calcul=0.687826656 s
+  Rulare 3: 0.688273528 s; calcul=0.685712981 s
+  Rulare 4: 0.68590519 s; calcul=0.683567735 s
+  Rulare 5: 0.69335858 s; calcul=0.690946952 s
+  MEDIA=0.690744675 s; deviatie standard=0.0039355449 s; calcul mediu=0.688248321 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,1,1,mpi,2d,static,64,4,5,0.690744675,0.0039355449,0.688248321
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.696376419 s; calcul=0.693497539 s
+  Rulare 2: 0.698368756 s; calcul=0.695838253 s
+  Rulare 3: 0.709405902 s; calcul=0.706998524 s
+  Rulare 4: 0.699968676 s; calcul=0.697184207 s
+  Rulare 5: 0.699163841 s; calcul=0.696854793 s
+  MEDIA=0.700656719 s; deviatie standard=0.00506966552 s; calcul mediu=0.698074663 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,1,1,mpi,2d,dynamic,64,4,5,0.700656719,0.00506966552,0.698074663
+
+Operatie: rotate; secvential
+  Rulare 1: 0.007987181 s; calcul=0.006878638 s
+  Rulare 2: 0.008144516 s; calcul=0.00693768 s
+  Rulare 3: 0.007965141 s; calcul=0.006830221 s
+  Rulare 4: 0.007900182 s; calcul=0.006799055 s
+  Rulare 5: 0.008145307 s; calcul=0.006949389 s
+  MEDIA=0.0080284654 s; deviatie standard=0.00011100756 s; calcul mediu=0.0068789966 s; blocuri=1; verificare: OK
+CSV,rotate,2000,2000,1,1,seq,-,-,1,0,5,0.0080284654,0.00011100756,0.0068789966
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.008382308 s; calcul=0.006962513 s
+  Rulare 2: 0.008141849 s; calcul=0.006828263 s
+  Rulare 3: 0.008178599 s; calcul=0.006691886 s
+  Rulare 4: 0.007640139 s; calcul=0.006637098 s
+  Rulare 5: 0.007882307 s; calcul=0.006662806 s
+  MEDIA=0.0080450404 s; deviatie standard=0.000287830915 s; calcul mediu=0.0067565132 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,1,1,mpi,1d,static,64,0,5,0.0080450404,0.000287830915,0.0067565132
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.008635141 s; calcul=0.006872143 s
+  Rulare 2: 0.008307557 s; calcul=0.006873096 s
+  Rulare 3: 0.008168766 s; calcul=0.006767096 s
+  Rulare 4: 0.008314016 s; calcul=0.00682051 s
+  Rulare 5: 0.008351933 s; calcul=0.00694605 s
+  MEDIA=0.0083554826 s; deviatie standard=0.000171100008 s; calcul mediu=0.006855779 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,1,1,mpi,1d,dynamic,64,0,5,0.0083554826,0.000171100008,0.006855779
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.009032059 s; calcul=0.007076388 s
+  Rulare 2: 0.008431516 s; calcul=0.006803924 s
+  Rulare 3: 0.008661267 s; calcul=0.006889091 s
+  Rulare 4: 0.008057015 s; calcul=0.006662437 s
+  Rulare 5: 0.008555724 s; calcul=0.006718557 s
+  MEDIA=0.0085475162 s; deviatie standard=0.000354201853 s; calcul mediu=0.0068300794 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,1,1,mpi,2d,static,64,0,5,0.0085475162,0.000354201853,0.0068300794
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.009371185 s; calcul=0.006922016 s
+  Rulare 2: 0.008866351 s; calcul=0.006854764 s
+  Rulare 3: 0.008847642 s; calcul=0.006919221 s
+  Rulare 4: 0.008585933 s; calcul=0.006739054 s
+  Rulare 5: 0.00833785 s; calcul=0.006797722 s
+  MEDIA=0.0088017922 s; deviatie standard=0.000384810266 s; calcul mediu=0.0068465554 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,1,1,mpi,2d,dynamic,64,0,5,0.0088017922,0.000384810266,0.0068465554
+### Imagine=imagini/input_6000x6000.ppm; p=16
+[Rank 0 on ubuntu1] Loaded imagini/input_6000x6000.ppm (6000x6000), 16 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+  4: ubuntu1
+  5: ubuntu2
+  6: ubuntu1
+  7: ubuntu2
+  8: ubuntu1
+  9: ubuntu2
+  10: ubuntu1
+  11: ubuntu2
+  12: ubuntu1
+  13: ubuntu2
+  14: ubuntu1
+  15: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.098149938 s; calcul=0.078874693 s
+  Rulare 2: 0.081820381 s; calcul=0.060935242 s
+  Rulare 3: 0.086314474 s; calcul=0.054962022 s
+  Rulare 4: 0.086790541 s; calcul=0.064809416 s
+  Rulare 5: 0.075972521 s; calcul=0.057907861 s
+  MEDIA=0.085809571 s; deviatie standard=0.00815755902 s; calcul mediu=0.0634978468 s; blocuri=1; verificare: OK
+CSV,gray,6000,6000,16,2,seq,-,-,1,0,5,0.085809571,0.00815755902,0.0634978468
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.727744645 s; calcul=0.019591582 s
+  Rulare 2: 0.746718932 s; calcul=0.007698891 s
+  Rulare 3: 0.650056164 s; calcul=0.009105852 s
+  Rulare 4: 0.687531916 s; calcul=0.012252276 s
+  Rulare 5: 0.788882214 s; calcul=0.011358816 s
+  MEDIA=0.720186774 s; deviatie standard=0.0535368623 s; calcul mediu=0.0120014834 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,16,2,mpi,1d,static,64,0,5,0.720186774,0.0535368623,0.0120014834
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.630688834 s; calcul=0.010201856 s
+  Rulare 2: 0.667393029 s; calcul=0.016270005 s
+  Rulare 3: 0.607652624 s; calcul=0.016456922 s
+  Rulare 4: 0.64299879 s; calcul=0.008095356 s
+  Rulare 5: 0.685769524 s; calcul=0.022512958 s
+  MEDIA=0.64690056 s; deviatie standard=0.0306152821 s; calcul mediu=0.0147074194 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,16,2,mpi,1d,dynamic,64,0,5,0.64690056,0.0306152821,0.0147074194
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.682643059 s; calcul=0.020485955 s
+  Rulare 2: 0.662607846 s; calcul=0.018804888 s
+  Rulare 3: 0.664090357 s; calcul=0.011133866 s
+  Rulare 4: 0.661389508 s; calcul=0.023496067 s
+  Rulare 5: 0.69747507 s; calcul=0.023368337 s
+  MEDIA=0.673641168 s; deviatie standard=0.0159071076 s; calcul mediu=0.0194578226 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,16,2,mpi,2d,static,64,0,5,0.673641168,0.0159071076,0.0194578226
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.68064518 s; calcul=0.01009928 s
+  Rulare 2: 0.633706554 s; calcul=0.01833666 s
+  Rulare 3: 0.634727967 s; calcul=0.013740456 s
+  Rulare 4: 0.634323133 s; calcul=0.01346008 s
+  Rulare 5: 0.79683481 s; calcul=0.017469577 s
+  MEDIA=0.676047529 s; deviatie standard=0.070448022 s; calcul mediu=0.0146212106 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,16,2,mpi,2d,dynamic,64,0,5,0.676047529,0.070448022,0.0146212106
+
+Operatie: blur; secvential
+  Rulare 1: 9.02500793 s; calcul=8.96398469 s
+  Rulare 2: 9.17871339 s; calcul=9.15158163 s
+  Rulare 3: 9.17488221 s; calcul=9.15872773 s
+  Rulare 4: 9.02568958 s; calcul=8.9983173 s
+  Rulare 5: 9.0964547 s; calcul=9.07232482 s
+  MEDIA=9.10014956 s; deviatie standard=0.0757651803 s; calcul mediu=9.06898723 s; blocuri=1; verificare: OK
+CSV,blur,6000,6000,16,2,seq,-,-,1,4,5,9.10014956,0.0757651803,9.06898723
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 1.58856291 s; calcul=0.935852377 s
+  Rulare 2: 1.55361112 s; calcul=0.949858864 s
+  Rulare 3: 1.48585568 s; calcul=0.94467427 s
+  Rulare 4: 1.55529486 s; calcul=1.0123509 s
+  Rulare 5: 1.42880703 s; calcul=0.765048218 s
+  MEDIA=1.52242632 s; deviatie standard=0.0642823149 s; calcul mediu=0.921556926 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,16,2,mpi,1d,static,64,4,5,1.52242632,0.0642823149,0.921556926
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 1.08753472 s; calcul=0.782019768 s
+  Rulare 2: 1.11559773 s; calcul=0.781719682 s
+  Rulare 3: 0.988070755 s; calcul=0.802790504 s
+  Rulare 4: 1.0518546 s; calcul=0.750392079 s
+  Rulare 5: 1.04474157 s; calcul=0.776885625 s
+  MEDIA=1.05755987 s; deviatie standard=0.0481987561 s; calcul mediu=0.778761532 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,16,2,mpi,1d,dynamic,64,4,5,1.05755987,0.0481987561,0.778761532
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 1.45023207 s; calcul=0.72602635 s
+  Rulare 2: 1.44202075 s; calcul=0.743357637 s
+  Rulare 3: 1.42141164 s; calcul=0.743118303 s
+  Rulare 4: 1.44600555 s; calcul=0.73947529 s
+  Rulare 5: 1.44396167 s; calcul=0.771153226 s
+  MEDIA=1.44072634 s; deviatie standard=0.0112186185 s; calcul mediu=0.744626161 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,16,2,mpi,2d,static,64,4,5,1.44072634,0.0112186185,0.744626161
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 1.14741009 s; calcul=0.808229648 s
+  Rulare 2: 1.13321148 s; calcul=0.794073807 s
+  Rulare 3: 1.05795595 s; calcul=0.843586641 s
+  Rulare 4: 1.03403062 s; calcul=0.811040657 s
+  Rulare 5: 1.09716781 s; calcul=0.756562256 s
+  MEDIA=1.09395519 s; deviatie standard=0.048207112 s; calcul mediu=0.802698602 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,16,2,mpi,2d,dynamic,64,4,5,1.09395519,0.048207112,0.802698602
+
+Operatie: rotate; secvential
+  Rulare 1: 0.461257163 s; calcul=0.442458745 s
+  Rulare 2: 0.472415513 s; calcul=0.435559722 s
+  Rulare 3: 0.453884409 s; calcul=0.43892515 s
+  Rulare 4: 0.463149773 s; calcul=0.439465568 s
+  Rulare 5: 0.451971587 s; calcul=0.432362544 s
+  MEDIA=0.460535689 s; deviatie standard=0.00815578854 s; calcul mediu=0.437754346 s; blocuri=1; verificare: OK
+CSV,rotate,6000,6000,16,2,seq,-,-,1,0,5,0.460535689,0.00815578854,0.437754346
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.930501894 s; calcul=0.021710908 s
+  Rulare 2: 0.909200864 s; calcul=0.011061667 s
+  Rulare 3: 0.922659492 s; calcul=0.019040821 s
+  Rulare 4: 0.915792262 s; calcul=0.018202693 s
+  Rulare 5: 0.860327491 s; calcul=0.025861262 s
+  MEDIA=0.907696401 s; deviatie standard=0.0276387618 s; calcul mediu=0.0191754702 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,16,2,mpi,1d,static,64,0,5,0.907696401,0.0276387618,0.0191754702
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.946081864 s; calcul=0.021973617 s
+  Rulare 2: 0.939953725 s; calcul=0.019312898 s
+  Rulare 3: 0.93554325 s; calcul=0.021906038 s
+  Rulare 4: 0.973355931 s; calcul=0.016337562 s
+  Rulare 5: 0.936902958 s; calcul=0.01472493 s
+  MEDIA=0.946367546 s; deviatie standard=0.0156231835 s; calcul mediu=0.018851009 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,16,2,mpi,1d,dynamic,64,0,5,0.946367546,0.0156231835,0.018851009
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.933481862 s; calcul=0.011887586 s
+  Rulare 2: 0.940636304 s; calcul=0.014082428 s
+  Rulare 3: 0.915810553 s; calcul=0.015998971 s
+  Rulare 4: 0.852594901 s; calcul=0.016149852 s
+  Rulare 5: 0.876055322 s; calcul=0.015356552 s
+  MEDIA=0.903715788 s; deviatie standard=0.0379930042 s; calcul mediu=0.0146950778 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,16,2,mpi,2d,static,64,0,5,0.903715788,0.0379930042,0.0146950778
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 1.0460517 s; calcul=0.028340929 s
+  Rulare 2: 0.922186409 s; calcul=0.019924901 s
+  Rulare 3: 0.952350437 s; calcul=0.019929151 s
+  Rulare 4: 0.871636763 s; calcul=0.01903373 s
+  Rulare 5: 0.924771708 s; calcul=0.02134599 s
+  MEDIA=0.943399404 s; deviatie standard=0.0643515228 s; calcul mediu=0.0217149402 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,16,2,mpi,2d,dynamic,64,0,5,0.943399404,0.0643515228,0.0217149402
+### Imagine=imagini/input_6000x6000.ppm; p=8
+[Rank 0 on ubuntu1] Loaded imagini/input_6000x6000.ppm (6000x6000), 8 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+  4: ubuntu1
+  5: ubuntu2
+  6: ubuntu1
+  7: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.04379537 s; calcul=0.035049285 s
+  Rulare 2: 0.043711398 s; calcul=0.034732576 s
+  Rulare 3: 0.045000833 s; calcul=0.034912368 s
+  Rulare 4: 0.043493813 s; calcul=0.034533284 s
+  Rulare 5: 0.043622536 s; calcul=0.034513908 s
+  MEDIA=0.04392479 s; deviatie standard=0.000611811424 s; calcul mediu=0.0347482842 s; blocuri=1; verificare: OK
+CSV,gray,6000,6000,8,2,seq,-,-,1,0,5,0.04392479,0.000611811424,0.0347482842
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.253515356 s; calcul=0.008189321 s
+  Rulare 2: 0.259750419 s; calcul=0.007882445 s
+  Rulare 3: 0.250982014 s; calcul=0.00842453 s
+  Rulare 4: 0.314224478 s; calcul=0.010449205 s
+  Rulare 5: 0.260981465 s; calcul=0.008464197 s
+  MEDIA=0.267890746 s; deviatie standard=0.0262363053 s; calcul mediu=0.0086819396 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,8,2,mpi,1d,static,64,0,5,0.267890746,0.0262363053,0.0086819396
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.236869342 s; calcul=0.02476051 s
+  Rulare 2: 0.19852667 s; calcul=0.013847009 s
+  Rulare 3: 0.184410373 s; calcul=0.013285466 s
+  Rulare 4: 0.202148475 s; calcul=0.023462002 s
+  Rulare 5: 0.160445667 s; calcul=0.016832853 s
+  MEDIA=0.196480105 s; deviatie standard=0.0278916137 s; calcul mediu=0.018437568 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,8,2,mpi,1d,dynamic,64,0,5,0.196480105,0.0278916137,0.018437568
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.25461011 s; calcul=0.008959574 s
+  Rulare 2: 0.397393968 s; calcul=0.010223411 s
+  Rulare 3: 0.280695448 s; calcul=0.010517956 s
+  Rulare 4: 0.277398479 s; calcul=0.007996988 s
+  Rulare 5: 0.26536323 s; calcul=0.009891868 s
+  MEDIA=0.295092247 s; deviatie standard=0.0581132456 s; calcul mediu=0.0095179594 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,8,2,mpi,2d,static,64,0,5,0.295092247,0.0581132456,0.0095179594
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.232421743 s; calcul=0.010245787 s
+  Rulare 2: 0.197686252 s; calcul=0.01088558 s
+  Rulare 3: 0.270662498 s; calcul=0.018169109 s
+  Rulare 4: 0.187819468 s; calcul=0.009620452 s
+  Rulare 5: 0.242662279 s; calcul=0.017279565 s
+  MEDIA=0.226250448 s; deviatie standard=0.0338109331 s; calcul mediu=0.0132400986 s; blocuri=64; verificare: OK
+CSV,gray,6000,6000,8,2,mpi,2d,dynamic,64,0,5,0.226250448,0.0338109331,0.0132400986
+
+Operatie: blur; secvential
+  Rulare 1: 6.56264418 s; calcul=6.53467875 s
+  Rulare 2: 6.48792129 s; calcul=6.46606035 s
+  Rulare 3: 6.45602965 s; calcul=6.43808955 s
+  Rulare 4: 6.5905093 s; calcul=6.57762143 s
+  Rulare 5: 6.48294522 s; calcul=6.46864977 s
+  MEDIA=6.51600993 s; deviatie standard=0.0574560491 s; calcul mediu=6.49701997 s; blocuri=1; verificare: OK
+CSV,blur,6000,6000,8,2,seq,-,-,1,4,5,6.51600993,0.0574560491,6.49701997
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 1.74236464 s; calcul=1.21813661 s
+  Rulare 2: 1.29709117 s; calcul=1.02061931 s
+  Rulare 3: 1.26675441 s; calcul=1.00817688 s
+  Rulare 4: 1.26071851 s; calcul=1.00401891 s
+  Rulare 5: 1.2737988 s; calcul=1.00452137 s
+  MEDIA=1.36814551 s; deviatie standard=0.209648928 s; calcul mediu=1.05109462 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,8,2,mpi,1d,static,64,4,5,1.36814551,0.209648928,1.05109462
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 1.02356621 s; calcul=1.01298046 s
+  Rulare 2: 1.03196557 s; calcul=1.02025566 s
+  Rulare 3: 1.02634193 s; calcul=1.01126225 s
+  Rulare 4: 1.02317708 s; calcul=1.01242171 s
+  Rulare 5: 1.02126203 s; calcul=1.01216583 s
+  MEDIA=1.02526256 s; deviatie standard=0.00416312462 s; calcul mediu=1.01381718 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,8,2,mpi,1d,dynamic,64,4,5,1.02526256,0.00416312462,1.01381718
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 1.26624636 s; calcul=1.01180186 s
+  Rulare 2: 1.25840004 s; calcul=1.01225707 s
+  Rulare 3: 1.2659129 s; calcul=1.00795084 s
+  Rulare 4: 1.2787167 s; calcul=1.026205 s
+  Rulare 5: 1.35446941 s; calcul=1.05827897 s
+  MEDIA=1.28474908 s; deviatie standard=0.0396507821 s; calcul mediu=1.02329875 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,8,2,mpi,2d,static,64,4,5,1.28474908,0.0396507821,1.02329875
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 1.05487281 s; calcul=1.03777634 s
+  Rulare 2: 1.0401406 s; calcul=1.02342354 s
+  Rulare 3: 1.15008785 s; calcul=1.1055439 s
+  Rulare 4: 1.20014485 s; calcul=1.11411235 s
+  Rulare 5: 1.05714057 s; calcul=1.02502684 s
+  MEDIA=1.10047734 s; deviatie standard=0.0706986295 s; calcul mediu=1.06117659 s; blocuri=64; verificare: OK
+CSV,blur,6000,6000,8,2,mpi,2d,dynamic,64,4,5,1.10047734,0.0706986295,1.06117659
+
+Operatie: rotate; secvential
+  Rulare 1: 0.381498289 s; calcul=0.367695034 s
+  Rulare 2: 0.386501133 s; calcul=0.366887698 s
+  Rulare 3: 0.386441216 s; calcul=0.367437075 s
+  Rulare 4: 0.388994185 s; calcul=0.37537456 s
+  Rulare 5: 0.383073202 s; calcul=0.365084817 s
+  MEDIA=0.385301605 s; deviatie standard=0.0029918105 s; calcul mediu=0.368495837 s; blocuri=1; verificare: OK
+CSV,rotate,6000,6000,8,2,seq,-,-,1,0,5,0.385301605,0.0029918105,0.368495837
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.453433491 s; calcul=0.013049721 s
+  Rulare 2: 0.458246174 s; calcul=0.012740594 s
+  Rulare 3: 0.459381094 s; calcul=0.013698975 s
+  Rulare 4: 0.452948697 s; calcul=0.014261058 s
+  Rulare 5: 0.470480798 s; calcul=0.014022768 s
+  MEDIA=0.458898051 s; deviatie standard=0.00707238523 s; calcul mediu=0.0135546232 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,8,2,mpi,1d,static,64,0,5,0.458898051,0.00707238523,0.0135546232
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.385794429 s; calcul=0.012195219 s
+  Rulare 2: 0.347867925 s; calcul=0.012898544 s
+  Rulare 3: 0.372510884 s; calcul=0.013394168 s
+  Rulare 4: 0.381166579 s; calcul=0.011331465 s
+  Rulare 5: 0.376189187 s; calcul=0.011301549 s
+  MEDIA=0.372705801 s; deviatie standard=0.01476473 s; calcul mediu=0.012224189 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,8,2,mpi,1d,dynamic,64,0,5,0.372705801,0.01476473,0.012224189
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.387816814 s; calcul=0.017941534 s
+  Rulare 2: 0.449986417 s; calcul=0.01317364 s
+  Rulare 3: 0.451282715 s; calcul=0.013284348 s
+  Rulare 4: 0.444522931 s; calcul=0.01418356 s
+  Rulare 5: 0.44609873 s; calcul=0.012168302 s
+  MEDIA=0.435941521 s; deviatie standard=0.0270435217 s; calcul mediu=0.0141502768 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,8,2,mpi,2d,static,64,0,5,0.435941521,0.0270435217,0.0141502768
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.335597095 s; calcul=0.012396853 s
+  Rulare 2: 0.366439374 s; calcul=0.012247976 s
+  Rulare 3: 0.385414677 s; calcul=0.011751133 s
+  Rulare 4: 0.370831187 s; calcul=0.012405898 s
+  Rulare 5: 0.300674753 s; calcul=0.014044862 s
+  MEDIA=0.351791417 s; deviatie standard=0.0338480742 s; calcul mediu=0.0125693444 s; blocuri=64; verificare: OK
+CSV,rotate,6000,6000,8,2,mpi,2d,dynamic,64,0,5,0.351791417,0.0338480742,0.0125693444
+### Imagine=imagini/input_2000x2000.ppm; p=16
+[Rank 0 on ubuntu1] Loaded imagini/input_2000x2000.ppm (2000x2000), 16 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+  2: ubuntu1
+  3: ubuntu2
+  4: ubuntu1
+  5: ubuntu2
+  6: ubuntu1
+  7: ubuntu2
+  8: ubuntu1
+  9: ubuntu2
+  10: ubuntu1
+  11: ubuntu2
+  12: ubuntu1
+  13: ubuntu2
+  14: ubuntu1
+  15: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.020433962 s; calcul=0.005059317 s
+  Rulare 2: 0.011207881 s; calcul=0.003822311 s
+  Rulare 3: 0.009724166 s; calcul=0.005572694 s
+  Rulare 4: 0.010524753 s; calcul=0.005422944 s
+  Rulare 5: 0.009707631 s; calcul=0.003827936 s
+  MEDIA=0.0123196786 s; deviatie standard=0.00457872595 s; calcul mediu=0.0047410404 s; blocuri=1; verificare: OK
+CSV,gray,2000,2000,16,2,seq,-,-,1,0,5,0.0123196786,0.00457872595,0.0047410404
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.173608858 s; calcul=0.002897388 s
+  Rulare 2: 0.161976643 s; calcul=0.002649723 s
+  Rulare 3: 0.21579137 s; calcul=0.002156342 s
+  Rulare 4: 0.164172404 s; calcul=0.002957431 s
+  Rulare 5: 0.194116445 s; calcul=0.002397301 s
+  MEDIA=0.181933144 s; deviatie standard=0.0227915107 s; calcul mediu=0.002611637 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,16,2,mpi,1d,static,64,0,5,0.181933144,0.0227915107,0.002611637
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.186909415 s; calcul=0.003384224 s
+  Rulare 2: 0.153813519 s; calcul=0.003027057 s
+  Rulare 3: 0.14958204 s; calcul=0.001787883 s
+  Rulare 4: 0.172815448 s; calcul=0.002237053 s
+  Rulare 5: 0.15237147 s; calcul=0.001049423 s
+  MEDIA=0.163098378 s; deviatie standard=0.0161659634 s; calcul mediu=0.002297128 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,16,2,mpi,1d,dynamic,64,0,5,0.163098378,0.0161659634,0.002297128
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.167828714 s; calcul=0.004856228 s
+  Rulare 2: 0.184374154 s; calcul=0.001892009 s
+  Rulare 3: 0.182154702 s; calcul=0.001168922 s
+  Rulare 4: 0.17276278 s; calcul=0.00198255 s
+  Rulare 5: 0.145747491 s; calcul=0.004658856 s
+  MEDIA=0.170573568 s; deviatie standard=0.015437291 s; calcul mediu=0.002911713 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,16,2,mpi,2d,static,64,0,5,0.170573568,0.015437291,0.002911713
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.145059737 s; calcul=0.002070343 s
+  Rulare 2: 0.144850683 s; calcul=0.00572107 s
+  Rulare 3: 0.19048316 s; calcul=0.001964633 s
+  Rulare 4: 0.14494935 s; calcul=0.004307563 s
+  Rulare 5: 0.171406182 s; calcul=0.002081591 s
+  MEDIA=0.159349822 s; deviatie standard=0.0208353408 s; calcul mediu=0.00322904 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,16,2,mpi,2d,dynamic,64,0,5,0.159349822,0.0208353408,0.00322904
+
+Operatie: blur; secvential
+  Rulare 1: 1.0009549 s; calcul=0.996172606 s
+  Rulare 2: 1.04307745 s; calcul=1.03274629 s
+  Rulare 3: 0.984761828 s; calcul=0.974501581 s
+  Rulare 4: 0.983664197 s; calcul=0.976856176 s
+  Rulare 5: 0.996949712 s; calcul=0.984170088 s
+  MEDIA=1.00188162 s; deviatie standard=0.0242241648 s; calcul mediu=0.992889348 s; blocuri=1; verificare: OK
+CSV,blur,2000,2000,16,2,seq,-,-,1,4,5,1.00188162,0.0242241648,0.992889348
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.348012012 s; calcul=0.120275384 s
+  Rulare 2: 0.373521659 s; calcul=0.110875426 s
+  Rulare 3: 0.317294216 s; calcul=0.109150337 s
+  Rulare 4: 0.33237137 s; calcul=0.121245303 s
+  Rulare 5: 0.354182063 s; calcul=0.120944302 s
+  MEDIA=0.345076264 s; deviatie standard=0.0214122115 s; calcul mediu=0.11649815 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,16,2,mpi,1d,static,64,4,5,0.345076264,0.0214122115,0.11649815
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.358452542 s; calcul=0.089796699 s
+  Rulare 2: 0.296094022 s; calcul=0.123906441 s
+  Rulare 3: 0.289784907 s; calcul=0.086970035 s
+  Rulare 4: 0.397232653 s; calcul=0.150155218 s
+  Rulare 5: 0.315320451 s; calcul=0.140799386 s
+  MEDIA=0.331376915 s; deviatie standard=0.0455594543 s; calcul mediu=0.118325556 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,16,2,mpi,1d,dynamic,64,4,5,0.331376915,0.0455594543,0.118325556
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.321232106 s; calcul=0.116105325 s
+  Rulare 2: 0.346777693 s; calcul=0.117771331 s
+  Rulare 3: 0.313752659 s; calcul=0.113541771 s
+  Rulare 4: 0.361797142 s; calcul=0.112216181 s
+  Rulare 5: 0.406288407 s; calcul=0.13762379 s
+  MEDIA=0.349969601 s; deviatie standard=0.0369438676 s; calcul mediu=0.11945168 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,16,2,mpi,2d,static,64,4,5,0.349969601,0.0369438676,0.11945168
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.28038706 s; calcul=0.109907257 s
+  Rulare 2: 0.37500575 s; calcul=0.09937642 s
+  Rulare 3: 0.395010642 s; calcul=0.094893099 s
+  Rulare 4: 0.25138827 s; calcul=0.11784329 s
+  Rulare 5: 0.348142179 s; calcul=0.08776937 s
+  MEDIA=0.32998678 s; deviatie standard=0.0616893159 s; calcul mediu=0.101957887 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,16,2,mpi,2d,dynamic,64,4,5,0.32998678,0.0616893159,0.101957887
+
+Operatie: rotate; secvential
+  Rulare 1: 0.023602975 s; calcul=0.013927819 s
+  Rulare 2: 0.011746175 s; calcul=0.007027993 s
+  Rulare 3: 0.015897026 s; calcul=0.007553704 s
+  Rulare 4: 0.015460243 s; calcul=0.00701491 s
+  Rulare 5: 0.026832092 s; calcul=0.011061389 s
+  MEDIA=0.0187077022 s; deviatie standard=0.00626255057 s; calcul mediu=0.009317163 s; blocuri=1; verificare: OK
+CSV,rotate,2000,2000,16,2,seq,-,-,1,0,5,0.0187077022,0.00626255057,0.009317163
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.296043751 s; calcul=0.010910297 s
+  Rulare 2: 0.280607861 s; calcul=0.002457178 s
+  Rulare 3: 0.364316196 s; calcul=0.006336194 s
+  Rulare 4: 0.355619278 s; calcul=0.002753555 s
+  Rulare 5: 0.301156714 s; calcul=0.001338963 s
+  MEDIA=0.31954876 s; deviatie standard=0.0377900516 s; calcul mediu=0.0047592374 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,16,2,mpi,1d,static,64,0,5,0.31954876,0.0377900516,0.0047592374
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.318365262 s; calcul=0.003277849 s
+  Rulare 2: 0.346961799 s; calcul=0.001895758 s
+  Rulare 3: 0.285108384 s; calcul=0.001715424 s
+  Rulare 4: 0.302926515 s; calcul=0.00564532 s
+  Rulare 5: 0.307970176 s; calcul=0.009272629 s
+  MEDIA=0.312266427 s; deviatie standard=0.0228266054 s; calcul mediu=0.004361396 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,16,2,mpi,1d,dynamic,64,0,5,0.312266427,0.0228266054,0.004361396
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.308223208 s; calcul=0.007532996 s
+  Rulare 2: 0.317690214 s; calcul=0.002760055 s
+  Rulare 3: 0.264366988 s; calcul=0.003096347 s
+  Rulare 4: 0.349789687 s; calcul=0.014430739 s
+  Rulare 5: 0.277969015 s; calcul=0.006887826 s
+  MEDIA=0.303607822 s; deviatie standard=0.0337252564 s; calcul mediu=0.0069415926 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,16,2,mpi,2d,static,64,0,5,0.303607822,0.0337252564,0.0069415926
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.335055624 s; calcul=0.00411056 s
+  Rulare 2: 0.300071833 s; calcul=0.003992309 s
+  Rulare 3: 0.2880163 s; calcul=0.004503105 s
+  Rulare 4: 0.266468626 s; calcul=0.003351888 s
+  Rulare 5: 0.322852197 s; calcul=0.007197036 s
+  MEDIA=0.302492916 s; deviatie standard=0.0273313638 s; calcul mediu=0.0046309796 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,16,2,mpi,2d,dynamic,64,0,5,0.302492916,0.0273313638,0.0046309796
+### Imagine=imagini/input_2000x2000.ppm; p=2
+[Rank 0 on ubuntu1] Loaded imagini/input_2000x2000.ppm (2000x2000), 2 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.004593187 s; calcul=0.003782893 s
+  Rulare 2: 0.004469311 s; calcul=0.003740268 s
+  Rulare 3: 0.004389269 s; calcul=0.003776269 s
+  Rulare 4: 0.004416019 s; calcul=0.003745769 s
+  Rulare 5: 0.004469352 s; calcul=0.003801394 s
+  MEDIA=0.0044674276 s; deviatie standard=7.83809417e-05 s; calcul mediu=0.0037693186 s; blocuri=1; verificare: OK
+CSV,gray,2000,2000,2,2,seq,-,-,1,0,5,0.0044674276,7.83809417e-05,0.0037693186
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.068885928 s; calcul=0.005294188 s
+  Rulare 2: 0.058343333 s; calcul=0.004880188 s
+  Rulare 3: 0.063268566 s; calcul=0.005291854 s
+  Rulare 4: 0.06979089 s; calcul=0.005170026 s
+  Rulare 5: 0.063056107 s; calcul=0.005246402 s
+  MEDIA=0.0646689648 s; deviatie standard=0.00470619117 s; calcul mediu=0.0051765316 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,2,2,mpi,1d,static,64,0,5,0.0646689648,0.00470619117,0.0051765316
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.057689955 s; calcul=0.004734689 s
+  Rulare 2: 0.057182828 s; calcul=0.004644897 s
+  Rulare 3: 0.056660366 s; calcul=0.004795685 s
+  Rulare 4: 0.061398641 s; calcul=0.005073776 s
+  Rulare 5: 0.06229127 s; calcul=0.005141519 s
+  MEDIA=0.059044612 s; deviatie standard=0.00260135565 s; calcul mediu=0.0048781132 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,2,2,mpi,1d,dynamic,64,0,5,0.059044612,0.00260135565,0.0048781132
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.063824986 s; calcul=0.005337107 s
+  Rulare 2: 0.067495671 s; calcul=0.005255648 s
+  Rulare 3: 0.061062347 s; calcul=0.004937563 s
+  Rulare 4: 0.064307238 s; calcul=0.005235028 s
+  Rulare 5: 0.064081488 s; calcul=0.005197483 s
+  MEDIA=0.064154346 s; deviatie standard=0.00228375091 s; calcul mediu=0.0051925658 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,2,2,mpi,2d,static,64,0,5,0.064154346,0.00228375091,0.0051925658
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.063850028 s; calcul=0.005234521 s
+  Rulare 2: 0.064457697 s; calcul=0.005200566 s
+  Rulare 3: 0.063440734 s; calcul=0.005351857 s
+  Rulare 4: 0.063822361 s; calcul=0.005304401 s
+  Rulare 5: 0.067271669 s; calcul=0.005225228 s
+  MEDIA=0.0645684978 s; deviatie standard=0.00155436334 s; calcul mediu=0.0052633146 s; blocuri=64; verificare: OK
+CSV,gray,2000,2000,2,2,mpi,2d,dynamic,64,0,5,0.0645684978,0.00155436334,0.0052633146
+
+Operatie: blur; secvential
+  Rulare 1: 0.721563799 s; calcul=0.719803682 s
+  Rulare 2: 0.717081988 s; calcul=0.715524702 s
+  Rulare 3: 0.704633143 s; calcul=0.702335178 s
+  Rulare 4: 0.703140679 s; calcul=0.701612258 s
+  Rulare 5: 0.695888815 s; calcul=0.69429368 s
+  MEDIA=0.708461685 s; deviatie standard=0.0105714582 s; calcul mediu=0.7067139 s; blocuri=1; verificare: OK
+CSV,blur,2000,2000,2,2,seq,-,-,1,4,5,0.708461685,0.0105714582,0.7067139
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 0.784564047 s; calcul=0.695006059 s
+  Rulare 2: 0.78991495 s; calcul=0.696686572 s
+  Rulare 3: 0.778091348 s; calcul=0.692379507 s
+  Rulare 4: 0.778475809 s; calcul=0.692877386 s
+  Rulare 5: 0.812279269 s; calcul=0.704165932 s
+  MEDIA=0.788665085 s; deviatie standard=0.01406801 s; calcul mediu=0.696223091 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,2,2,mpi,1d,static,64,4,5,0.788665085,0.01406801,0.696223091
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 0.812247894 s; calcul=0.707082862 s
+  Rulare 2: 0.780426111 s; calcul=0.69343922 s
+  Rulare 3: 0.779926899 s; calcul=0.693209466 s
+  Rulare 4: 0.777549888 s; calcul=0.692342383 s
+  Rulare 5: 0.79095983 s; calcul=0.698258743 s
+  MEDIA=0.788222124 s; deviatie standard=0.0143893872 s; calcul mediu=0.696866535 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,2,2,mpi,1d,dynamic,64,4,5,0.788222124,0.0143893872,0.696866535
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 0.781998619 s; calcul=0.697672577 s
+  Rulare 2: 0.788506234 s; calcul=0.700448086 s
+  Rulare 3: 0.781086405 s; calcul=0.69514356 s
+  Rulare 4: 0.783769627 s; calcul=0.696885114 s
+  Rulare 5: 0.784758299 s; calcul=0.698559325 s
+  MEDIA=0.784023837 s; deviatie standard=0.00289075919 s; calcul mediu=0.697741732 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,2,2,mpi,2d,static,64,4,5,0.784023837,0.00289075919,0.697741732
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 0.779863525 s; calcul=0.695802693 s
+  Rulare 2: 0.779245397 s; calcul=0.695046726 s
+  Rulare 3: 0.787385395 s; calcul=0.697236866 s
+  Rulare 4: 0.791048581 s; calcul=0.697569779 s
+  Rulare 5: 0.782905081 s; calcul=0.696676029 s
+  MEDIA=0.784089596 s; deviatie standard=0.0050502173 s; calcul mediu=0.696466419 s; blocuri=64; verificare: OK
+CSV,blur,2000,2000,2,2,mpi,2d,dynamic,64,4,5,0.784089596,0.0050502173,0.696466419
+
+Operatie: rotate; secvential
+  Rulare 1: 0.008624489 s; calcul=0.007088785 s
+  Rulare 2: 0.008120737 s; calcul=0.006779742 s
+  Rulare 3: 0.008430488 s; calcul=0.00691916 s
+  Rulare 4: 0.008163945 s; calcul=0.006812951 s
+  Rulare 5: 0.008109154 s; calcul=0.006785034 s
+  MEDIA=0.0082897626 s; deviatie standard=0.000228508528 s; calcul mediu=0.0068771344 s; blocuri=1; verificare: OK
+CSV,rotate,2000,2000,2,2,seq,-,-,1,0,5,0.0082897626,0.000228508528,0.0068771344
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.096516899 s; calcul=0.008403742 s
+  Rulare 2: 0.095291185 s; calcul=0.008456112 s
+  Rulare 3: 0.095591395 s; calcul=0.008398075 s
+  Rulare 4: 0.095120476 s; calcul=0.00833624 s
+  Rulare 5: 0.100069001 s; calcul=0.008466359 s
+  MEDIA=0.0965177912 s; deviatie standard=0.00205708254 s; calcul mediu=0.0084121056 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,2,2,mpi,1d,static,64,0,5,0.0965177912,0.00205708254,0.0084121056
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.09405547 s; calcul=0.008348116 s
+  Rulare 2: 0.094221013 s; calcul=0.008337659 s
+  Rulare 3: 0.094650098 s; calcul=0.008375487 s
+  Rulare 4: 0.093729844 s; calcul=0.008369534 s
+  Rulare 5: 0.096329148 s; calcul=0.00843237 s
+  MEDIA=0.0945971146 s; deviatie standard=0.00102344229 s; calcul mediu=0.0083726332 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,2,2,mpi,1d,dynamic,64,0,5,0.0945971146,0.00102344229,0.0083726332
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.094922433 s; calcul=0.008465027 s
+  Rulare 2: 0.094496681 s; calcul=0.008252149 s
+  Rulare 3: 0.095383102 s; calcul=0.008511692 s
+  Rulare 4: 0.096545941 s; calcul=0.00855636 s
+  Rulare 5: 0.095854604 s; calcul=0.008570953 s
+  MEDIA=0.0954405522 s; deviatie standard=0.000799369152 s; calcul mediu=0.0084712362 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,2,2,mpi,2d,static,64,0,5,0.0954405522,0.000799369152,0.0084712362
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.09468989 s; calcul=0.008470364 s
+  Rulare 2: 0.095653853 s; calcul=0.008378444 s
+  Rulare 3: 0.096773442 s; calcul=0.008393699 s
+  Rulare 4: 0.096598608 s; calcul=0.008551616 s
+  Rulare 5: 0.095666478 s; calcul=0.008530822 s
+  MEDIA=0.0958764542 s; deviatie standard=0.00084078373 s; calcul mediu=0.008464989 s; blocuri=64; verificare: OK
+CSV,rotate,2000,2000,2,2,mpi,2d,dynamic,64,0,5,0.0958764542,0.00084078373,0.008464989
+### Imagine=imagini/input_4000x4000.ppm; p=2
+[Rank 0 on ubuntu1] Loaded imagini/input_4000x4000.ppm (4000x4000), 2 procese
+Plasare procese (rank: calculator):
+  0: ubuntu1
+  1: ubuntu2
+
+Operatie: gray; secvential
+  Rulare 1: 0.018892442 s; calcul=0.014834658 s
+  Rulare 2: 0.01869615 s; calcul=0.014840033 s
+  Rulare 3: 0.01870376 s; calcul=0.014841449 s
+  Rulare 4: 0.01833694 s; calcul=0.014623365 s
+  Rulare 5: 0.018321675 s; calcul=0.01463374 s
+  MEDIA=0.0185901934 s; deviatie standard=0.000250857432 s; calcul mediu=0.014754649 s; blocuri=1; verificare: OK
+CSV,gray,4000,4000,2,2,seq,-,-,1,0,5,0.0185901934,0.000250857432,0.014754649
+
+Operatie: gray; MPI 1d static
+  Rulare 1: 0.175784588 s; calcul=0.016409265 s
+  Rulare 2: 0.188926278 s; calcul=0.016556026 s
+  Rulare 3: 0.186211306 s; calcul=0.016449108 s
+  Rulare 4: 0.191078622 s; calcul=0.016457558 s
+  Rulare 5: 0.193655927 s; calcul=0.016525518 s
+  MEDIA=0.187131344 s; deviatie standard=0.00690956432 s; calcul mediu=0.016479495 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,2,2,mpi,1d,static,64,0,5,0.187131344,0.00690956432,0.016479495
+
+Operatie: gray; MPI 1d dynamic
+  Rulare 1: 0.187264811 s; calcul=0.016531057 s
+  Rulare 2: 0.190286327 s; calcul=0.01644727 s
+  Rulare 3: 0.186210722 s; calcul=0.016462472 s
+  Rulare 4: 0.184966758 s; calcul=0.016374099 s
+  Rulare 5: 0.191572291 s; calcul=0.016536103 s
+  MEDIA=0.188060182 s; deviatie standard=0.00277997395 s; calcul mediu=0.0164702002 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,2,2,mpi,1d,dynamic,64,0,5,0.188060182,0.00277997395,0.0164702002
+
+Operatie: gray; MPI 2d static
+  Rulare 1: 0.193308717 s; calcul=0.016498723 s
+  Rulare 2: 0.19439593 s; calcul=0.016618597 s
+  Rulare 3: 0.195695645 s; calcul=0.01665989 s
+  Rulare 4: 0.196716276 s; calcul=0.016572931 s
+  Rulare 5: 0.201041338 s; calcul=0.016643756 s
+  MEDIA=0.196231581 s; deviatie standard=0.00298197366 s; calcul mediu=0.0165987794 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,2,2,mpi,2d,static,64,0,5,0.196231581,0.00298197366,0.0165987794
+
+Operatie: gray; MPI 2d dynamic
+  Rulare 1: 0.194221263 s; calcul=0.016547522 s
+  Rulare 2: 0.197896073 s; calcul=0.016557934 s
+  Rulare 3: 0.195813188 s; calcul=0.016460187 s
+  Rulare 4: 0.19161725 s; calcul=0.016332641 s
+  Rulare 5: 0.196265273 s; calcul=0.016629597 s
+  MEDIA=0.195162609 s; deviatie standard=0.00237521836 s; calcul mediu=0.0165055762 s; blocuri=64; verificare: OK
+CSV,gray,4000,4000,2,2,mpi,2d,dynamic,64,0,5,0.195162609,0.00237521836,0.0165055762
+
+Operatie: blur; secvential
+  Rulare 1: 2.78523288 s; calcul=2.77791472 s
+  Rulare 2: 2.7969908 s; calcul=2.79037791 s
+  Rulare 3: 2.77984516 s; calcul=2.77316845 s
+  Rulare 4: 2.78782039 s; calcul=2.78071849 s
+  Rulare 5: 2.78878131 s; calcul=2.77927594 s
+  MEDIA=2.78773411 s; deviatie standard=0.00623061234 s; calcul mediu=2.7802911 s; blocuri=1; verificare: OK
+CSV,blur,4000,4000,2,2,seq,-,-,1,4,5,2.78773411,0.00623061234,2.7802911
+
+Operatie: blur; MPI 1d static
+  Rulare 1: 3.0143837 s; calcul=2.77847494 s
+  Rulare 2: 3.05752479 s; calcul=2.81102318 s
+  Rulare 3: 3.01226544 s; calcul=2.7811385 s
+  Rulare 4: 3.01400465 s; calcul=2.77406914 s
+  Rulare 5: 3.01762788 s; calcul=2.77154855 s
+  MEDIA=3.02316129 s; deviatie standard=0.0193072421 s; calcul mediu=2.78325086 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,2,2,mpi,1d,static,64,4,5,3.02316129,0.0193072421,2.78325086
+
+Operatie: blur; MPI 1d dynamic
+  Rulare 1: 3.02699351 s; calcul=2.78396859 s
+  Rulare 2: 3.01421724 s; calcul=2.77299993 s
+  Rulare 3: 3.00721408 s; calcul=2.77026942 s
+  Rulare 4: 3.01647963 s; calcul=2.77031062 s
+  Rulare 5: 3.01980143 s; calcul=2.76863761 s
+  MEDIA=3.01694118 s; deviatie standard=0.00727117239 s; calcul mediu=2.77323723 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,2,2,mpi,1d,dynamic,64,4,5,3.01694118,0.00727117239,2.77323723
+
+Operatie: blur; MPI 2d static
+  Rulare 1: 3.00748979 s; calcul=2.77857778 s
+  Rulare 2: 3.00925463 s; calcul=2.78192092 s
+  Rulare 3: 3.00387102 s; calcul=2.77957357 s
+  Rulare 4: 4.05979761 s; calcul=3.33281904 s
+  Rulare 5: 3.12816281 s; calcul=2.87427441 s
+  MEDIA=3.24171517 s; deviatie standard=0.460332026 s; calcul mediu=2.90943314 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,2,2,mpi,2d,static,64,4,5,3.24171517,0.460332026,2.90943314
+
+Operatie: blur; MPI 2d dynamic
+  Rulare 1: 3.02746109 s; calcul=2.79582409 s
+  Rulare 2: 3.0279443 s; calcul=2.78908298 s
+  Rulare 3: 3.01785901 s; calcul=2.78630922 s
+  Rulare 4: 3.04115771 s; calcul=2.79884472 s
+  Rulare 5: 3.0275758 s; calcul=2.78150392 s
+  MEDIA=3.02839958 s; deviatie standard=0.00830120793 s; calcul mediu=2.79031299 s; blocuri=64; verificare: OK
+CSV,blur,4000,4000,2,2,mpi,2d,dynamic,64,4,5,3.02839958,0.00830120793,2.79031299
+
+Operatie: rotate; secvential
+  Rulare 1: 0.05658716 s; calcul=0.047392039 s
+  Rulare 2: 0.05198481 s; calcul=0.04304221 s
+  Rulare 3: 0.049034133 s; calcul=0.041614155 s
+  Rulare 4: 0.048807052 s; calcul=0.041658405 s
+  Rulare 5: 0.047998629 s; calcul=0.041259278 s
+  MEDIA=0.0508823568 s; deviatie standard=0.00352841642 s; calcul mediu=0.0429932174 s; blocuri=1; verificare: OK
+CSV,rotate,4000,4000,2,2,seq,-,-,1,0,5,0.0508823568,0.00352841642,0.0429932174
+
+Operatie: rotate; MPI 1d static
+  Rulare 1: 0.244001466 s; calcul=0.028570603 s
+  Rulare 2: 0.239790388 s; calcul=0.028271685 s
+  Rulare 3: 0.245319395 s; calcul=0.028594436 s
+  Rulare 4: 0.238080998 s; calcul=0.028298892 s
+  Rulare 5: 0.239241633 s; calcul=0.028251646 s
+  MEDIA=0.241286776 s; deviatie standard=0.00317530933 s; calcul mediu=0.0283974524 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,2,2,mpi,1d,static,64,0,5,0.241286776,0.00317530933,0.0283974524
+
+Operatie: rotate; MPI 1d dynamic
+  Rulare 1: 0.236195356 s; calcul=0.028324107 s
+  Rulare 2: 0.250686192 s; calcul=0.028506557 s
+  Rulare 3: 0.261934873 s; calcul=0.028751689 s
+  Rulare 4: 0.239514802 s; calcul=0.028419977 s
+  Rulare 5: 0.238788213 s; calcul=0.02837693 s
+  MEDIA=0.245423887 s; deviatie standard=0.0107752001 s; calcul mediu=0.028475852 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,2,2,mpi,1d,dynamic,64,0,5,0.245423887,0.0107752001,0.028475852
+
+Operatie: rotate; MPI 2d static
+  Rulare 1: 0.247467789 s; calcul=0.028271892 s
+  Rulare 2: 0.244284552 s; calcul=0.028310555 s
+  Rulare 3: 0.245787357 s; calcul=0.028818526 s
+  Rulare 4: 0.249043844 s; calcul=0.02825176 s
+  Rulare 5: 0.276816712 s; calcul=0.028505936 s
+  MEDIA=0.252680051 s; deviatie standard=0.013610306 s; calcul mediu=0.0284317338 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,2,2,mpi,2d,static,64,0,5,0.252680051,0.013610306,0.0284317338
+
+Operatie: rotate; MPI 2d dynamic
+  Rulare 1: 0.277375175 s; calcul=0.028576647 s
+  Rulare 2: 0.280438576 s; calcul=0.028742522 s
+  Rulare 3: 0.277134964 s; calcul=0.02864285 s
+  Rulare 4: 0.279920113 s; calcul=0.028804729 s
+  Rulare 5: 0.279878113 s; calcul=0.028771977 s
+  MEDIA=0.278949388 s; deviatie standard=0.00156467242 s; calcul mediu=0.028707745 s; blocuri=64; verificare: OK
+CSV,rotate,4000,4000,2,2,mpi,2d,dynamic,64,0,5,0.278949388,0.00156467242,0.028707745
+### Final 11/09/2026 13:46:07
