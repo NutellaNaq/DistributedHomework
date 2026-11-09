@@ -1,0 +1,164 @@
+
+Operatie: gray; seq; 1d; static
+Plasare procese (rank: calculator):
+0: denis
+Rulare 1: 0.011528603 s; kernel=0.007447437 s
+Rulare 2: 0.010232881 s; kernel=0.006938725 s
+Rulare 3: 0.011449713 s; kernel=0.007506148 s
+Rulare 4: 0.01121117 s; kernel=0.00786974 s
+Rulare 5: 0.016055913 s; kernel=0.011261378 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=1
+MEDIA=0.012095656 s; deviatia standard=0.00227347054 s; media kernel=0.0082046856 s
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: gray; mpi; 1d; static
+Rulare 1: 0.007175623 s; kernel=0.006391324 s
+Rulare 2: 0.009275077 s; kernel=0.008332538 s
+Rulare 3: 0.007114521 s; kernel=0.006303181 s
+Rulare 4: 0.007551433 s; kernel=0.006734885 s
+Rulare 5: 0.007543158 s; kernel=0.006647108 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0077319624 s; deviatia standard=0.000886028787 s; media kernel=0.0068818072 s
+Accelerare=1.56437077; eficienta=156.437077%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: gray; mpi; 1d; dynamic
+Rulare 1: 0.007033648 s; kernel=0.006183155 s
+Rulare 2: 0.007314662 s; kernel=0.006499207 s
+Rulare 3: 0.007332796 s; kernel=0.006543689 s
+Rulare 4: 0.01663582 s; kernel=0.01507136 s
+Rulare 5: 0.009168453 s; kernel=0.008232302 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0094970758 s; deviatia standard=0.00407998699 s; media kernel=0.0085059426 s
+Accelerare=1.27361898; eficienta=127.361898%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: gray; mpi; 2d; static
+Rulare 1: 0.008386888 s; kernel=0.007388811 s
+Rulare 2: 0.007977141 s; kernel=0.006973654 s
+Rulare 3: 0.010788056 s; kernel=0.009681178 s
+Rulare 4: 0.007359835 s; kernel=0.006477504 s
+Rulare 5: 0.007423998 s; kernel=0.006591568 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0083871836 s; deviatia standard=0.00140672447 s; media kernel=0.007422543 s
+Accelerare=1.44215944; eficienta=144.215944%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: gray; mpi; 2d; dynamic
+Rulare 1: 0.007622803 s; kernel=0.006618023 s
+Rulare 2: 0.010151199 s; kernel=0.009000657 s
+Rulare 3: 0.009565885 s; kernel=0.008476585 s
+Rulare 4: 0.009605905 s; kernel=0.00861567 s
+Rulare 5: 0.008190596 s; kernel=0.007263361 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0090272776 s; deviatia standard=0.00106778883 s; media kernel=0.0079948592 s
+Accelerare=1.33990075; eficienta=133.990075%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: blur; seq; 1d; static
+Rulare 1: 0.090851693 s; kernel=0.084703046 s
+Rulare 2: 0.093475944 s; kernel=0.087895283 s
+Rulare 3: 0.092586062 s; kernel=0.086485302 s
+Rulare 4: 0.10464638 s; kernel=0.097636652 s
+Rulare 5: 0.09057348 s; kernel=0.084648807 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=1
+MEDIA=0.0944267118 s; deviatia standard=0.00583870114 s; media kernel=0.088273818 s
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: blur; mpi; 1d; static
+Rulare 1: 0.092035975 s; kernel=0.0883297 s
+Rulare 2: 0.105082079 s; kernel=0.099484947 s
+Rulare 3: 0.090632014 s; kernel=0.087078259 s
+Rulare 4: 0.087337322 s; kernel=0.083516021 s
+Rulare 5: 0.099126548 s; kernel=0.095057687 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0948427876 s; deviatia standard=0.00716125891 s; media kernel=0.0906933228 s
+Accelerare=0.995612995; eficienta=99.5612995%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: blur; mpi; 1d; dynamic
+Rulare 1: 0.092373419 s; kernel=0.087994974 s
+Rulare 2: 0.089484068 s; kernel=0.086013013 s
+Rulare 3: 0.086649122 s; kernel=0.083088461 s
+Rulare 4: 0.089031431 s; kernel=0.085115832 s
+Rulare 5: 0.088295553 s; kernel=0.084436911 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0891667186 s; deviatia standard=0.00209160004 s; media kernel=0.0853298382 s
+Accelerare=1.05899054; eficienta=105.899054%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: blur; mpi; 2d; static
+Rulare 1: 0.085941064 s; kernel=0.082407889 s
+Rulare 2: 0.086334004 s; kernel=0.082618943 s
+Rulare 3: 0.069216225 s; kernel=0.066069941 s
+Rulare 4: 0.071190442 s; kernel=0.067786354 s
+Rulare 5: 0.07286418 s; kernel=0.069175628 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.077109183 s; deviatia standard=0.00834340722 s; media kernel=0.073611751 s
+Accelerare=1.22458452; eficienta=122.458452%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: blur; mpi; 2d; dynamic
+Rulare 1: 0.068936624 s; kernel=0.065727545 s
+Rulare 2: 0.068608196 s; kernel=0.065407493 s
+Rulare 3: 0.069958622 s; kernel=0.06658257 s
+Rulare 4: 0.06763425 s; kernel=0.064518471 s
+Rulare 5: 0.068176248 s; kernel=0.064832944 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.068662788 s; deviatia standard=0.000873464909 s; media kernel=0.0654138046 s
+Accelerare=1.37522397; eficienta=137.522397%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: rotate; seq; 1d; static
+Rulare 1: 0.015742929 s; kernel=0.010175999 s
+Rulare 2: 0.013825331 s; kernel=0.010320771 s
+Rulare 3: 0.015288389 s; kernel=0.011753582 s
+Rulare 4: 0.017952148 s; kernel=0.013577278 s
+Rulare 5: 0.016711094 s; kernel=0.012761087 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=1
+MEDIA=0.0159039782 s; deviatia standard=0.00154694025 s; media kernel=0.0117177434 s
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: rotate; mpi; 1d; static
+Rulare 1: 0.01195131 s; kernel=0.009718065 s
+Rulare 2: 0.012305561 s; kernel=0.009927461 s
+Rulare 3: 0.011679558 s; kernel=0.009572083 s
+Rulare 4: 0.011777783 s; kernel=0.009753303 s
+Rulare 5: 0.011826561 s; kernel=0.00956203 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0119081546 s; deviatia standard=0.00024274725 s; media kernel=0.0097065884 s
+Accelerare=1.33555355; eficienta=133.555355%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: rotate; mpi; 1d; dynamic
+Rulare 1: 0.012690416 s; kernel=0.010441151 s
+Rulare 2: 0.01221017 s; kernel=0.009660261 s
+Rulare 3: 0.011601636 s; kernel=0.009553481 s
+Rulare 4: 0.01161756 s; kernel=0.009588539 s
+Rulare 5: 0.011895874 s; kernel=0.00968241 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0120031312 s; deviatia standard=0.000457327321 s; media kernel=0.0097851684 s
+Accelerare=1.32498578; eficienta=132.498578%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: rotate; mpi; 2d; static
+Rulare 1: 0.012877451 s; kernel=0.010718393 s
+Rulare 2: 0.012052462 s; kernel=0.010036341 s
+Rulare 3: 0.015311813 s; kernel=0.011721456 s
+Rulare 4: 0.012298392 s; kernel=0.010257616 s
+Rulare 5: 0.011980232 s; kernel=0.010229338 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.01290407 s; deviatia standard=0.00139135668 s; media kernel=0.0105926288 s
+Accelerare=1.23247768; eficienta=123.247768%
+Verificare rezultat: OK (incalzirea nu intra in medie)
+
+Operatie: rotate; mpi; 2d; dynamic
+Rulare 1: 0.011797317 s; kernel=0.00985331 s
+Rulare 2: 0.011220108 s; kernel=0.009619661 s
+Rulare 3: 0.011989134 s; kernel=0.010034786 s
+Rulare 4: 0.012251645 s; kernel=0.010583732 s
+Rulare 5: 0.011227134 s; kernel=0.009644971 s
+Rezolutie: 1920x1080; procese alocate jobului=1; procese active=1; blocuri=64
+MEDIA=0.0116970676 s; deviatia standard=0.000461312493 s; media kernel=0.009947292 s
+Accelerare=1.35965515; eficienta=135.965515%
+Verificare rezultat: OK (incalzirea nu intra in medie)
