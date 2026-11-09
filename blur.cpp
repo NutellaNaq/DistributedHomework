@@ -1,6 +1,10 @@
 #include <mpi.h>
 
+#include <algorithm>
+#include <cerrno>
 #include <climits>
+#include <cmath>
+#include <cstdlib>
 #include <cstring>
 #include <fstream>
 #include <iostream>
@@ -45,12 +49,14 @@ static bool readImage(const std::string& path, int& width, int& height, int& cha
         std::cerr << "Error: invalid image size\n";
         return false;
     }
-    if (max_value <= 0 || max_value > 255) {
+    if (max_value != 255) {
         std::cerr << "Error: only 8-bit images are supported\n";
         return false;
     }
     // MPI numara elementele in int
-    if (static_cast<long long>(width) * height * channels > INT_MAX) {
+    // Modificam calculul pentru a evita overflow
+    if (width > INT_MAX / channels ||
+    height > INT_MAX / (width * channels)) {
         std::cerr << "Error: image too large for MPI int counts\n";
         return false;
     }
@@ -76,42 +82,59 @@ static bool writeImage(const std::string& path, int width, int height, int chann
     return static_cast<bool>(file);
 }
 
-// strip_with_halo = fasia + un rand halo deasupra (index 0) si unul dedesubt.
-// Randul 'row' din fasie se afla deci la indexul row + 1 in strip_with_halo.
+static double gaussianWeight(int row_offset, int col_offset, double sigma) {
+    const double row_distance = row_offset;
+    const double col_distance = col_offset;
+    const double distance_squared = row_distance * row_distance + col_distance * col_distance;
+    return std::exp(-distance_squared / (2.0 * sigma * sigma));
+}
+
+// strip_with_halo = fasia + halo_rows randuri halo de fiecare parte.
+// Randul 'row' din fasie se afla la indexul row + halo_rows in strip_with_halo.
 // first_image_row ne spune unde e fasia in imagine, ca sa stim unde sunt marginile reale.
 static void blurStrip(const std::vector<unsigned char>& strip_with_halo, std::vector<unsigned char>& blurred_strip,
-                      int width, int image_height, int channels, int first_image_row, int row_count) {
+                      int width, int image_height, int channels, int first_image_row, int row_count,
+                      int blur_radius, int halo_rows) {
     const size_t bytes_per_row = static_cast<size_t>(width) * channels;
+    const double sigma = std::max(blur_radius / 2.0, 0.5);
 
     for (int row = 0; row < row_count; ++row) {
         const int image_row = first_image_row + row;
 
         for (int col = 0; col < width; ++col) {
             for (int channel = 0; channel < channels; ++channel) {
-                int neighbor_sum = 0, neighbor_count = 0;
+                double weighted_sum = 0.0, weight_sum = 0.0;
 
-                for (int row_offset = -1; row_offset <= 1; ++row_offset) {
-                    // la marginea de sus/jos a imaginii nu exista vecini
-                    // (halo-ul de acolo e doar zerouri)
-                    const int neighbor_image_row = image_row + row_offset;
-                    if (neighbor_image_row < 0 || neighbor_image_row >= image_height) continue;
+                // Calculam cat de sus si cat de jos putem merge pe randuri si coloane
 
-                    const size_t halo_row = row + 1 + row_offset;
+                // ------ Randuri ------
+                // Primiele (Limita stanga)
+                const int first_row_offset = std::max(-blur_radius, -image_row);
+                // Ultimele (Limita Dreapta)
+                const int last_row_offset = std::min(blur_radius, image_height - 1 - image_row);
+                
+                
+                // ------ Coloane ------
+                // Primele (Limita sus)
+                const int first_col_offset = std::max(-blur_radius, -col);
+                // Ultimele (Limita jos)
+                const int last_col_offset = std::min(blur_radius, width - 1 - col);
 
-                    for (int col_offset = -1; col_offset <= 1; ++col_offset) {
+
+                for (int row_offset = first_row_offset; row_offset <= last_row_offset; ++row_offset) {
+                    const size_t halo_row = row + halo_rows + row_offset;
+
+                    for (int col_offset = first_col_offset; col_offset <= last_col_offset; ++col_offset) {
                         const int neighbor_col = col + col_offset;
-                        if (neighbor_col < 0 || neighbor_col >= width) continue;
 
-                        neighbor_sum += strip_with_halo[halo_row * bytes_per_row
-                                                        + static_cast<size_t>(neighbor_col) * channels + channel];
-                        ++neighbor_count;
+                        const double weight = gaussianWeight(row_offset, col_offset, sigma);
+                        weighted_sum += weight * strip_with_halo[halo_row * bytes_per_row + static_cast<size_t>(neighbor_col) * channels + channel];
+                        weight_sum += weight;
                     }
                 }
 
-                // pe margini sunt mai putin de 9 vecini, de asta impartim la neighbor_count
-                // (+ neighbor_count / 2 face rotunjire in loc de trunchiere)
                 blurred_strip[row * bytes_per_row + static_cast<size_t>(col) * channels + channel] =
-                    static_cast<unsigned char>((neighbor_sum + neighbor_count / 2) / neighbor_count);
+                    static_cast<unsigned char>(std::lround(weighted_sum / weight_sum));
             }
         }
     }
@@ -128,11 +151,24 @@ int main(int argc, char** argv) {
     int host_name_length = 0;
     MPI_Get_processor_name(host_name, &host_name_length);
 
-    if (argc != 3) {
-        if (my_rank == 0) std::cerr << "Usage: mpirun -np N ./blur <input.ppm|.pgm> <output>\n";
+    if (argc != 3 && argc != 4) {
+        if (my_rank == 0) std::cerr << "Usage: mpirun -np N ./blur <input.ppm|.pgm> <output> [blur-radius]\n";
         MPI_Finalize();
         return 1;
     }
+
+    int blur_radius = 2;
+    if (my_rank == 0 && argc == 4) {
+        char* end = nullptr;
+        errno = 0;
+        const long parsed_radius = std::strtol(argv[3], &end, 10);
+        if (errno == ERANGE || end == argv[3] || *end != '\0' || parsed_radius < 0 || parsed_radius > INT_MAX) {
+            std::cerr << "Error: blur radius must be a non-negative integer\n";
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
+        blur_radius = static_cast<int>(parsed_radius);
+    }
+
     const std::string input_path = argv[1];
     const std::string output_path = argv[2];
 
@@ -145,7 +181,7 @@ int main(int argc, char** argv) {
             MPI_Abort(MPI_COMM_WORLD, 1);
         }
         std::cout << "[Rank 0 on " << host_name << "] Loaded " << input_path
-                  << " (" << width << "x" << height << "), operation: blur\n";
+                  << " (" << width << "x" << height << "), operation: Gaussian blur\n";
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
@@ -157,6 +193,10 @@ int main(int argc, char** argv) {
     width = image_info[0];
     height = image_info[1];
     channels = image_info[2];
+    MPI_Bcast(&blur_radius, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    blur_radius = std::min(blur_radius, std::max(width, height) - 1);
+    const int halo_rows = std::min(blur_radius, height - 1);
+    if (my_rank == 0) std::cout << "Using blur radius: " << blur_radius << "\n";
 
     // impartim randurile cat mai egal, primele procese iau cate un rand in plus
     std::vector<int> rows_per_process(process_count), first_row_of_process(process_count);
@@ -189,31 +229,57 @@ int main(int argc, char** argv) {
     std::cout << "  -> Rank " << my_rank << " (" << host_name << ") processing "
               << my_row_count << " rows starting at row " << my_first_row << "\n";
 
-    // copiem fasia intre cele doua randuri halo
-    std::vector<unsigned char> strip_with_halo(static_cast<size_t>(my_row_count + 2) * bytes_per_row, 0);
-    if (!my_strip.empty()) std::memcpy(&strip_with_halo[bytes_per_row], my_strip.data(), my_strip.size());
+    // Copiem fasia intre randurile halo necesare razei alese.
+    std::vector<unsigned char> strip_with_halo(static_cast<size_t>(my_row_count + 2 * halo_rows) * bytes_per_row, 0);
 
-    unsigned char* top_halo       = &strip_with_halo[0];
-    unsigned char* first_own_row  = &strip_with_halo[bytes_per_row];
-    unsigned char* last_own_row   = &strip_with_halo[static_cast<size_t>(my_row_count) * bytes_per_row];
-    unsigned char* bottom_halo    = &strip_with_halo[static_cast<size_t>(my_row_count + 1) * bytes_per_row];
+    if (!my_strip.empty()) {
+        std::memcpy(&strip_with_halo[static_cast<size_t>(halo_rows) * bytes_per_row],
+                    my_strip.data(), my_strip.size());
+    }
 
-    // prima si ultima fasie nu au vecin; cu MPI_PROC_NULL comunicarea nu face nimic
+    // Cautam vecinii care au efectiv randuri, inclusiv daca unele procese au fasii goale.
     const bool has_rows = my_row_count > 0;
-    const int rank_above = (has_rows && my_first_row > 0) ? my_rank - 1 : MPI_PROC_NULL;
-    const int rank_below = (has_rows && my_first_row + my_row_count < height) ? my_rank + 1 : MPI_PROC_NULL;
+    int rank_above = MPI_PROC_NULL, rank_below = MPI_PROC_NULL;
+    if (has_rows) {
+        for (int p = my_rank - 1; p >= 0; --p) {
+            if (rows_per_process[p] > 0) {
+                rank_above = p;
+                break;
+            }
+        }
+        for (int p = my_rank + 1; p < process_count; ++p) {
+            if (rows_per_process[p] > 0) {
+                rank_below = p;
+                break;
+            }
+        }
+    }
 
-    // ultimul meu rand -> vecinul de jos; primesc halo-ul de sus de la vecinul de sus
-    MPI_Sendrecv(last_own_row, bytes_per_row, MPI_UNSIGNED_CHAR, rank_below, 0,
-                 top_halo, bytes_per_row, MPI_UNSIGNED_CHAR, rank_above, 0,
-                 MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-    // primul meu rand -> vecinul de sus; primesc halo-ul de jos de la vecinul de jos
-    MPI_Sendrecv(first_own_row, bytes_per_row, MPI_UNSIGNED_CHAR, rank_above, 1,
-                 bottom_halo, bytes_per_row, MPI_UNSIGNED_CHAR, rank_below, 1,
-                 MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    // Schimbam cate un rand pe nivel
+    // randurile halo primite sunt retransmise
+    // la nivelul urmator, astfel raza poate traversa fasii de orice dimensiune.
+
+    // Optiunea aceasta e in teorie mai rapida 
+    // deoarece fiecare proces are grija sa imparta ce este necesar
+    // Optiunea 2 este sa triimitem cu Scatterv, dar asta ar fi o actiune mai mare facut doar de un process la Rank 0
+    for (int depth = 1; has_rows && depth <= halo_rows; ++depth) {
+        const size_t own_start = static_cast<size_t>(halo_rows);
+        unsigned char* row_to_below = &strip_with_halo[(own_start + static_cast<size_t>(my_row_count) - depth) * bytes_per_row];
+        unsigned char* top_halo = &strip_with_halo[(own_start - depth) * bytes_per_row];
+        MPI_Sendrecv(row_to_below, bytes_per_row, MPI_UNSIGNED_CHAR, rank_below, 0,
+                     top_halo, bytes_per_row, MPI_UNSIGNED_CHAR, rank_above, 0,
+                     MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+        unsigned char* row_to_above = &strip_with_halo[(own_start + depth - 1) * bytes_per_row];
+        unsigned char* bottom_halo = &strip_with_halo[(own_start + my_row_count - 1 + depth) * bytes_per_row];
+        MPI_Sendrecv(row_to_above, bytes_per_row, MPI_UNSIGNED_CHAR, rank_above, 1,
+                     bottom_halo, bytes_per_row, MPI_UNSIGNED_CHAR, rank_below, 1,
+                     MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    }
 
     // rezultatul se scrie peste my_strip; citim doar din strip_with_halo
-    blurStrip(strip_with_halo, my_strip, width, height, channels, my_first_row, my_row_count);
+    blurStrip(strip_with_halo, my_strip, width, height, channels, my_first_row, my_row_count,
+              blur_radius, halo_rows);
 
     // blur-ul nu schimba dimensiunile, deci adunam fasiile exact cum le-am impartit
     std::vector<unsigned char> output_image;
