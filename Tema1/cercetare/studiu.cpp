@@ -62,7 +62,10 @@ static bool readHeaderInt(std::istream& in, int& value) {
 // Accepta doar P6 (color, 3 bytes/pixel), pentru ca gray are nevoie de R, G, B
 static bool readImage(const std::string& path, Image& image) {
     std::ifstream file(path, std::ios::binary);
-    if (!file.is_open()) return false;
+    if (!file.is_open()) {
+        std::cerr << "Error: file does not exist or cannot be opened (imaginile se creeaza cu genereaza_imagini.py)\n";
+        return false;
+    }
 
     std::string format;
     file >> format;

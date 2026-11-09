@@ -9,6 +9,7 @@ Tema1/rotate
 
 # Imagini (cele de test se genereaza cu Tema1/cercetare/genereaza_imagini.py)
 *.ppm
+!input_1920x1080.ppm
 *.pgm
 
 # Iesirile intermediare ale studiului (rezultate.txt si grafice/ se pastreaza)
